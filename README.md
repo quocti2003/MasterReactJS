@@ -15,14 +15,13 @@ This repository serves as the central hub for our code and the official guidelin
 ## 🚀 Daily Workflow Plan
 
 1.  Daily Quota: Each member must study and practice 5 videos from the playlist every day until July 31th.
-2.  **Báo cáo tiến độ (BẮT BUỘC):** Việc báo cáo phải được thực hiện **HÀNG NGÀY** sau khi hoàn thành chỉ tiêu.
-    *   **Hình thức:** Comment trực tiếp vào code HOẶC tạo một file `BAOCAO.md` trong thư mục của ngày học đó.
-    *   **Nội dung báo cáo:** Ghi rõ theo cú pháp:
-        ```
-        - Video [Số thứ tự] - [Tên video]: Nội dung chính học được, các khái niệm cốt lõi (VD: props, state, hooks...).
-        ```
-    *   **Upload code:** `git push` toàn bộ code đã thực hành của 5 video lên thư mục tương ứng của ngày hôm đó trên repository này.
-3.  **Phương pháp học (Preferences):** Khi gặp vướng mắc hoặc khái niệm khó, hãy chủ động tra cứu và đọc tài liệu trên các trang uy tín như **[Trang chủ React](https://react.dev/)** hoặc **[W3Schools](https://www.w3schools.com/react/)** trước khi đặt câu hỏi.
+2.  Mandatory Daily Reporting: Reporting is non-negotiable and must be done daily after completing the quota.
+How to Report: You can comment directly in the code or create a REPORT.md file inside the corresponding day's folder.
+Report Content: Follow this format clearly:
+Generated code
+- Video [##] - [Video Title]: Key takeaways, core concepts learned (e.g., props, state, hooks...).
+Code Submission: git push all practice code from the day's 5 videos to the appropriate folder in this repository.
+3.  Learning Approach: When facing challenges or new concepts relating to ReactJS, proactively research official documentation like the Official [React Docs](https://react.dev/) or [W3Schools](https://www.w3schools.com/REACT/DEFAULT.ASP).
 4.  Discipline: Each member is allowed a maximum of 2 rest days during the entire plan. Taking 3 days off in a row will result in a review and may lead to removal from the team before the final project starts.
 
 ## 📜  Rules & Consequences
@@ -30,23 +29,9 @@ This repository serves as the central hub for our code and the official guidelin
 *   Adherence to this learning plan is the minimum requirement to remain a part of the final project team in first semester.
 *   Warning: Any member who fails to comply with these rules or meet the objectives without a valid reason will be reported to the instructor and removed from the team.
 
-## 📂 Cấu trúc thư mục (Đề xuất)
+🛠️ Tools & Resources
+Primary Learning Playlist: 132 Videos React JS Tutorials for Beginners by Coder Stoic
+Code & Progress Management: This GitHub Repository.
+_______________________________________________________________________________________
+P.S. All members are expected to be familiar with basic Git commands (git add, git commit, git push) for submitting their work. Let's crush this goal together!
 
-Để dễ quản lý, chúng ta sẽ thống nhất cấu trúc thư mục như sau:
-
-```
-reactjs-learning-project/
-├── Day-01_videos-01-05/
-│   ├── code/
-│   └── BAOCAO.md
-├── Day-02_videos-06-10/
-│   ├── code/
-│   └── BAOCAO.md
-├── ...
-└── README.md
-```
-
-## 🛠️ Công cụ & Tài liệu
-
-*   **Playlist học chính:** [132 Videos React JS Tutorials for Beginners by Coder Stoic](URL_ĐẾN_PLAYLIST_CỦA_BẠN)
-*   **Quản lý code & Báo cáo:** Repository GitHub này.

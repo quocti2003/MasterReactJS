@@ -7,10 +7,11 @@ import $15 from "./mainComponents/$15";
 import $15_real from "./mainComponents/$15_real";
 import $16_ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
 import ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
+import $17 from "./mainComponents/$17";
 function App() {
   return (
     <div className="App">
-      <$16_ConditionalComponent />
+      <$17 />
     </div>
   );
 }

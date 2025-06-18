@@ -1,16 +1,20 @@
-# Kế hoạch chinh phục ReactJS - Tháng 7
+# MasterReactJS - 1 month - Until July 31th
 
-> ## "Nếu hôm nay không làm, thì khi nào mình mới làm?"
+> ## "If not today, so when you accomplish your tasks?"
+> ## "Self-discipline is the ability to make yourself do what you should do, when you should do it, whether you feel like it or not."
 
-Đây là kho lưu trữ code và cũng là kim chỉ nam cho kế hoạch học tập ReactJS cấp tốc của chúng ta để phục vụ cho đồ án cuối kỳ. Tất cả thành viên phải đọc kỹ và tuân thủ nghiêm túc.
+This repository serves as the central hub for our code and the official guideline for our accelerated ReactJS learning plan for the final project. All members are required to read this document carefully and strictly adhere to the rules.
 
-## 🎯 Mục tiêu chính
+## 🎯 Main Objective
 
-Hoàn thành **100%** playlist **132 videos về ReactJS** của Coder Stoic và nắm vững kiến thức nền tảng **trước khi kết thúc tháng 7**.
+- To complete 100% of the 132-video ReactJS playlist by Coder Stoic and gain a solid understanding of its core concepts by the end of July.
+- Watch all 132 videos aboout ReactJS from [Code Stoic](https://www.youtube.com/playlist?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza).
+- You don't have to stick to the 132-video playlist. The goal is to learn from any resource necessary to be able to code well in ReactJS.
+- Achieve proficiency in ReactJS. 
 
-## 🚀 Lộ trình & Cách thức thực hiện (What We Do)
+## 🚀 Daily Workflow Plan
 
-1.  **Chỉ tiêu mỗi ngày:** Mỗi thành viên **bắt buộc** học và thực hành theo **5 videos** từ playlist.
+1.  Daily Quota: Each member must study and practice 5 videos from the playlist every day until July 31th.
 2.  **Báo cáo tiến độ (BẮT BUỘC):** Việc báo cáo phải được thực hiện **HÀNG NGÀY** sau khi hoàn thành chỉ tiêu.
     *   **Hình thức:** Comment trực tiếp vào code HOẶC tạo một file `BAOCAO.md` trong thư mục của ngày học đó.
     *   **Nội dung báo cáo:** Ghi rõ theo cú pháp:
@@ -19,12 +23,12 @@ Hoàn thành **100%** playlist **132 videos về ReactJS** của Coder Stoic và
         ```
     *   **Upload code:** `git push` toàn bộ code đã thực hành của 5 video lên thư mục tương ứng của ngày hôm đó trên repository này.
 3.  **Phương pháp học (Preferences):** Khi gặp vướng mắc hoặc khái niệm khó, hãy chủ động tra cứu và đọc tài liệu trên các trang uy tín như **[Trang chủ React](https://react.dev/)** hoặc **[W3Schools](https://www.w3schools.com/react/)** trước khi đặt câu hỏi.
-4.  **Kỷ luật:** Có thể nghỉ ngơi **tối đa 2 ngày** trong cả quá trình, nhưng **TUYỆT ĐỐI KHÔNG được nghỉ 3 ngày liên tiếp**.
+4.  Discipline: Each member is allowed a maximum of 2 rest days during the entire plan. Taking 3 days off in a row will result in a review and may lead to removal from the team before the final project starts.
 
-## 📜 Quy định & Yêu cầu tối thiểu
+## 📜  Rules & Consequences
 
-*   Việc tuân thủ lộ trình học tập trên là **yêu cầu tối thiểu** để tiếp tục tham gia làm đồ án cuối kỳ cùng nhóm.
-*   **Cảnh báo:** Bất kỳ thành viên nào không tuân thủ các quy định, không hoàn thành mục tiêu mà không có lý do chính đáng sẽ bị **báo cáo lại cho giảng viên và buộc phải chuyển sang nhóm khác**.
+*   Adherence to this learning plan is the minimum requirement to remain a part of the final project team in first semester.
+*   Warning: Any member who fails to comply with these rules or meet the objectives without a valid reason will be reported to the instructor and removed from the team.
 
 ## 📂 Cấu trúc thư mục (Đề xuất)
 

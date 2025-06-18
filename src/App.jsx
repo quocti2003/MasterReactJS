@@ -5,11 +5,12 @@ import $13 from "./mainComponents/$13";
 import $14 from "./mainComponents/$14";
 import $15 from "./mainComponents/$15";
 import $15_real from "./mainComponents/$15_real";
-import ConditionalComponent from "./subComponents/ConditionalComponent";
+import $16_ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
+import ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
 function App() {
   return (
     <div className="App">
-      <ConditionalComponent />
+      <$16_ConditionalComponent />
     </div>
   );
 }

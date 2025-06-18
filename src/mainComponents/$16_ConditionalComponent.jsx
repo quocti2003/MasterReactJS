@@ -1,5 +1,5 @@
-import $16_Welcome from "./$16_Welcome";
-import $16_Code from "./$16_Code";
+import $16_Welcome from "../subComponents/$16_Welcome";
+import $16_Code from "../subComponents/$16_Code";
 
 export default function ConditionalComponent() {
   const display = true;

@@ -1,15 +1,3 @@
-<div align="center">
-ReactJS Mastery: The 31-Day Challenge
-![alt text](https://img.shields.io/badge/Status-In%20Progress-orange)
-
-![alt text](https://img.shields.io/badge/Deadline-July%2031st-red)
-
-![alt text](https://img.shields.io/badge/Technology-ReactJS-blue?logo=react)
-
-![alt text](https://img.shields.io/badge/Playlist-Coder%20Stoic-brightgreen?logo=youtube)
-</div>
-"Self-discipline is the ability to make yourself do what you should do, when you should do it, whether you feel like it or not."
-This repository is the command center for our accelerated ReactJS learning mission. Its purpose is to track progress, enforce discipline, and ensure every member is prepared for the final project. Read and adhere to these guidelines.
 🎯 The Mission
 Our primary objective is to transition from learners to proficient ReactJS developers by July 31st. This is achieved by:
 Completing the Core Curriculum: Master the entire 132-video ReactJS playlist by Coder Stoic.

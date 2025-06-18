@@ -8,10 +8,11 @@ import $15_real from "./mainComponents/$15_real";
 import $16_ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
 import ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
 import $17 from "./mainComponents/$17";
+import $18 from "./mainComponents/$18";
 function App() {
   return (
     <div className="App">
-      <$17 />
+      <$18 />
     </div>
   );
 }

@@ -10,10 +10,13 @@ import ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
 import $17 from "./mainComponents/$17";
 import $18 from "./mainComponents/$18";
 import $19 from "./mainComponents/$19";
+import $20 from "./mainComponents/$20";
+import $21 from "./mainComponents/$21";
+import $23 from "./mainComponents/$23";
 function App() {
   return (
     <div className="App">
-      <$19 />
+      <$23 />
     </div>
   );
 }

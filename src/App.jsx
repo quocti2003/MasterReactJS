@@ -9,10 +9,11 @@ import $16_ConditionalComponent from "./mainComponents/$16_ConditionalComponent"
 import ConditionalComponent from "./mainComponents/$16_ConditionalComponent";
 import $17 from "./mainComponents/$17";
 import $18 from "./mainComponents/$18";
+import $19 from "./mainComponents/$19";
 function App() {
   return (
     <div className="App">
-      <$18 />
+      <$19 />
     </div>
   );
 }

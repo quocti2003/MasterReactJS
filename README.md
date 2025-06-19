@@ -1,6 +1,6 @@
 <!-- HEADER SECTION -->
 <div align="center">
-  <h1>ReactJS Mastery: The 31-Day Challenge (Until July 31<sup>st</sup>)</h1>
+  <h1>ReactJS Mastery: The 31-Day Challenge</h1>
   
   <p>
     <a href="https://github.com"><img src="https://img.shields.io/badge/Status-In%20Progress-orange" alt="Status"/></a>
@@ -13,27 +13,31 @@
 <!-- MOTIVATIONAL QUOTE -->
 <blockquote>
   <p><i>"Self-discipline is the ability to make yourself do what you should do, when you should do it, whether you feel like it or not."</i></p>
-  <p><i>"If not today, so when you accomplish your tasks?"</i></p>
 </blockquote>
+
+<!-- INTRODUCTION -->
+<p>
+  This repository is the command center for our accelerated ReactJS learning mission. Its purpose is to track progress, enforce discipline, and ensure every member is prepared for the final project. <strong>Read and adhere to these guidelines.</strong>
+</p>
 
 <hr>
 
 <!-- THE MISSION SECTION -->
-<h2>🎯 Main Objectives</h2>
+<h2>🎯 The Mission</h2>
+<p>Our primary objective is to transition from learners to proficient ReactJS developers by <strong>July 31st</strong>. This is achieved by:</p>
 <ol>
-  <li><strong>Completing the Core Curriculum:</strong> Master the entire <a href="https://www.youtube.com/playlist?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza">132 videos ReactJS playlist by Code Stoic</a>.</li>
-  <li>You don't have to stick to the 132 videos playlist. The goal is to learn from any resource necessary to be able to code well in ReactJS.</li>
-  <li><b>Achieve proficiency in ReactJS.</b></li>
+  <li><strong>Completing the Core Curriculum:</strong> Master the entire <a href="https://www.youtube.com/playlist?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza">132-video ReactJS playlist by Coder Stoic</a>.</li>
+  <li><strong>Achieving True Proficiency:</strong> The playlist is our roadmap, not our limit. The ultimate goal is to <strong>code effectively in ReactJS</strong>. This requires going beyond the videos and actively seeking knowledge from other resources.</li>
 </ol>
 
 <!-- DAILY PROTOCOL SECTION -->
-<h2>🚀 Daily Workflow Plan </h2>
+<h2>🚀 Daily Protocol</h2>
 <p>Success is built on daily habits. The following protocol is <strong>mandatory</strong>.</p>
 <ul>
   <li>
     <strong>1. Daily Quota</strong>
     <ul>
-      <li>Study, practice and coding a minimum of <strong>5 videos</strong> from the playlist each day until .</li>
+      <li>Study and practice a minimum of <strong>5 videos</strong> from the playlist each day.</li>
     </ul>
   </li>
   <li>
@@ -68,16 +72,9 @@
   </li>
 </ul>
 
-<!-- RULES & CONSEQUENCES SECTION -->
-<h2>📜 Rules & Consequences</h2>
-<ul>
-  <li><strong>Commitment:</strong> Adherence to <strong>Main Objectives</strong> and <strong>Daily Workflow Plan</strong> is the <strong>non-negotiable minimum requirement</strong> to remain on the final project team.</li>
-  <li><strong>Accountability:</strong> Any member who fails to meet these objectives without a valid, pre-communicated reason <strong>will be reported to the instructor and removed from the team.</strong> No exceptions.</li>
-</ul>
-
 <!-- GIT WORKFLOW SECTION -->
 <h2>📂 Git Workflow & Collaboration Protocol</h2>
-<p>To maintain a clean and organized codebase, we will adhere to a strict Git workflow. <strong>Direct pushes to the <code>main</code> or <code>master</code> branch are forbidden.</strong></p>
+<p>To maintain a clean and organized codebase, we will adhere to a strict Git workflow. <strong>Direct pushes to the <code>main</code> branch are forbidden.</strong></p>
 <ol>
   <li>
     <strong>Gain Repository Access</strong>
@@ -88,30 +85,35 @@
     <p>Once you have access, clone the repository and create your own branch from <code>main</code>. <strong>Do not work on the <code>main</code> branch.</strong> Your branch must follow the naming convention: <code>name-branch</code> (e.g., <code>hieu-branch</code>, <code>huy-branch</code>, <code>toan-branch</code>).</p>
     <pre><code class="lang-bash"># Clone the repository (only do this once)
 git clone <repository_url>
-cd <repository_name># Create and switch to your new branch
+cd <repository_name>
+
+# Create and switch to your new branch
 git checkout -b yourname-branch</code></pre>
   </li>
   <li>
     <strong>Work and Push to Your Branch</strong>
     <p>All your work—code, notes, and daily reports—must be committed and pushed exclusively to <strong>your personal branch</strong>.</p>
     <pre><code class="lang-bash"># After making changes...
-  git add .
-  git commit -m "Your descriptive commit message"
-  git push -u origin yourname-branch</code></pre>
+git add .
+git commit -m "Your descriptive commit message"
+git push -u origin yourname-branch</code></pre>
   </li>
 </ol>
-<p><strong>Rule of Thumb:</strong> Each member is responsible for their own branch. Do not push to anyone else's branch or to <code>main</code>/<code>master</code> branch.</p>
+<p><strong>Rule of Thumb:</strong> Each member is responsible for their own branch. Do not push to anyone else's branch or to <code>main</code>.</p>
+
+<!-- RULES & CONSEQUENCES SECTION -->
+<h2>📜 Rules & Consequences</h2>
+<ul>
+  <li><strong>Commitment:</strong> Adherence to this plan is the <strong>non-negotiable minimum requirement</strong> to remain on the final project team.</li>
+  <li><strong>Accountability:</strong> Any member who fails to meet these objectives without a valid, pre-communicated reason <strong>will be reported to the instructor and removed from the team.</strong> No exceptions.</li>
+</ul>
 
 <!-- TOOLS & RESOURCES SECTION -->
-<h2>🛠️ Tools & Resources</h2>
+<h2>🛠️ Arsenal (Tools & Resources)</h2>
 <ul>
-  <li><strong>Primary Curriculum:</strong> <a href="https://www.youtube.com/playlist?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza">132 Videos ReactJS Tutorials by Code Stoic</a></li>
+  <li><strong>Primary Curriculum:</strong> <a href="https://www.youtube.com/playlist?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza">132 Videos ReactJS Tutorials by Coder Stoic</a></li>
   <li><strong>Version Control & Reporting:</strong> This GitHub Repository.</li>
-  <li><strong>Knowledge Base:</strong> 
-    <ul>
-      <li><a href="https://www.w3schools.com/REACT/DEFAULT.ASP">W3S ReactJS</a></li>
-      <li><a href="https://react.dev/">Official React Docs</a></li>
-    </ul> 
+  <li><strong>Knowledge Base:</strong> <a href="https://react.dev/">Official React Docs</a></li>
 </ul>
 
 <hr>

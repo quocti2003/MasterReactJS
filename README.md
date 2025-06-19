@@ -107,7 +107,11 @@ git checkout -b yourname-branch</code></pre>
 <ul>
   <li><strong>Primary Curriculum:</strong> <a href="https://www.youtube.com/playlist?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza">132 Videos ReactJS Tutorials by Code Stoic</a></li>
   <li><strong>Version Control & Reporting:</strong> This GitHub Repository.</li>
-  <li><strong>Knowledge Base:</strong><a href="[https://react.dev/](https://www.w3schools.com/REACT/DEFAULT.ASP)">W3S ReactJS</a><a href="https://react.dev/">Official React Docs</a></li>
+  <li><strong>Knowledge Base:</strong> 
+    <ul>
+      <li><a href="https://www.w3schools.com/REACT/DEFAULT.ASP">W3S ReactJS</a></li>
+      <li><a href="https://react.dev/">Official React Docs</a></li>
+    </ul> 
 </ul>
 
 <hr>

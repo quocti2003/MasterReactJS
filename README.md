@@ -8,6 +8,7 @@
     <a href="https://react.dev/"><img src="https://img.shields.io/badge/Technology-ReactJS-blue?logo=react" alt="Technology"/></a>
     <a href="https://www.youtube.com/playlist?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza"><img src="https://img.shields.io/badge/Playlist-Coder%20Stoic-brightgreen?logo=youtube" alt="Playlist"/></a>
   </p>
+  <img src="https://github.com/quocti2003/MasterReactJS/blob/ti-branch/luffty.png" alt="Group 4 thumbnail"/>
 </div>
 
 <!-- MOTIVATIONAL QUOTE -->

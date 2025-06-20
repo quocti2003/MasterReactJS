@@ -13,10 +13,11 @@ import $19 from "./mainComponents/$19";
 import $20 from "./mainComponents/$20";
 import $21 from "./mainComponents/$21";
 import $23 from "./mainComponents/$23";
+import $24 from "./mainComponents/$24";
 function App() {
   return (
     <div className="App">
-      <$23 />
+      <$24 />
     </div>
   );
 }

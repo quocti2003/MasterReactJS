@@ -1,3 +1,4 @@
+import { useState } from "react";
 export default function $23_State() {
   // cach de tao mot cai state variable trong react
   // thi phai su dung useSatet hook trong react
@@ -17,8 +18,11 @@ export default function $23_State() {
   return (
     <div>
       Count value is: {count}
-      <button onClick={handleClick}>Increment</button>
-      <button onClick={handleClick}>Decrement</button>
+      <br />
+      <button onClick={hanldeClick}>Increment</button>
+      <br />
+      <hr />
+      <button onClick={decrement}>Decrement</button>
     </div>
   );
 }

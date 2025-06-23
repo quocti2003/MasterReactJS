@@ -1,0 +1,95 @@
+Bai tap co ban khi ve react 
+import "./App.css";  
+ 
+function Header() { 
+  return ( 
+    <>  
+    <h1>Xin chao cac ban</h1> 
+    <p>chao cac ban hom va hien tai la : <strong>19:00</strong></p>
+    </>
+  );
+} 
+ 
+
+ 
+function User () { 
+   return ( 
+    <>  
+     <h1>Day la tieu de ma ban can phai lam</h1> 
+     <p>Va day la trang web ca nhan cua tui</p> 
+      
+      <Header></Header> 
+      <Header/>
+    </>
+   ); 
+} 
+export default User;
+
+
+// bai tap 2  
+import "./App.css";   
+
+import okban from "../src/assets/img/img.png";
+
+  
+
+let today = new Date().toLocaleDateString(); 
+let time = new Date().toLocaleTimeString(); 
+  
+
+const xinchao = [ 
+  "Xin chao cac ban da den toi trang web cua minh", 
+  "Day la 1 trong nhung tuyen thu cua react", 
+  "phai hoan thanh xong react truoc 1/7",
+]
+ 
+
+function ranDom(){ 
+  return Math.floor(Math.random() * xinchao.length);
+}
+  
+ 
+
+function Header(){  
+const title = xinchao[ranDom()];
+  return( 
+    <>  
+     <h1>{title}</h1> 
+     <p>ngay gio thi dau cua tuyen thu la <strong>{today} </strong> 
+       va thoi gian hien tai la : <strong>{time}</strong></p> 
+       <p>Ket qua : {1+2+ 3}</p>
+    </>
+  );
+} 
+
+let name = ["Dung"]; 
+const dangnhap = false; 
+const tenname ={ 
+    name : "hieu hiang", 
+    age : 30,
+}
+function Ten(){ 
+  return (  
+    <> 
+    {/*<h1*>day la ban ...</h1*/}
+    <h1>day la ban {name}</h1>  
+    <p>day la pheo tinh : {1 + 2 * 5}</p>
+    <p>{dangnhap ? "ban da dang nhap thanh cong" : "ban k the dang nhap"} </p>  
+     
+   <p>Day la ten cua ban : {tenname.name}, va day la tuoi cua ban : {tenname.age}</p>
+     
+    <img src={okban} alt="" />
+
+    </>
+  );
+}
+function App(){ 
+  return ( 
+    <> 
+   <Header></Header> 
+   <Ten></Ten>
+     </>
+  );
+} 
+export default App;
+

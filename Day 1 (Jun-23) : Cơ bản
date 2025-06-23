@@ -1,0 +1,23 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div className="App">
+      <h1>Hello I'm Cristiano Ronaldo</h1>
+      <p>This is my social media , follow me !!! </p>
+      <a 
+        href="https://www.instagram.com/cristiano/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        👉 Look my Instagram
+      </a>
+    </div>
+  )
+}
+
+export default App;

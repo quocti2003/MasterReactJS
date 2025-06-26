@@ -1,0 +1,83 @@
+-- Bài học từ 2 video 6 và 7 
++ Vào src tạo folder components với file tên Hello.jsx => Bài học : giúp mình quản lý code dễ dàng hơn , với Hello.jsx như một mảnh nhỏ có thể dùng đi dùng lại , đưa Hello.jsx vào file App.jsx tùy ý 
+// Viết code tại file App.jsx 
+import Hello from "./components/Hello";
+function App() {
+  return (
+    <div className="App">
+      <Hello />
+    </div>
+  );
+}
+export default App;
+
+// Viết code tại file Hello.jsx 
+function Hello() {
+  return <h1>Hello from a component!</h1>;
+}
+export default Hello;
+
+=> Lưu cả 2 file và chạy trên web ra được Hello from a component! 
+
+
++ Chèn thêm nội dung mình muốn qua một số code như const name , function , <h1> 
+// code tại file Hello.jsx
+const name = "Cristiano Ronaldo";
+function Hello() {
+  return <h1>Hello World ! My name is {name}</h1>;
+}
+export default Hello;
+
+-- Bài học video 8 , 9 , 10 
++ Cách tái sử dụng thông qua components/Hello.jsx và App.jsx => nhập dòng chữ " Hello I am Cristiano Ronaldo " và khi nhập 5 lần dòng <Hello /> thì sẽ hiển thị ra 5 lần 
+// Code ở App.jsx
+import Hello from "./components/Hello";                                                   
+function App() {
+  return (
+    <div className="App">
+      <Hello />
+      <Hello />
+      <Hello />
+      <Hello />
+      <Hello />
+    </div>
+  );
+}
+
+export default App; 
+
+// Code ở Hello.jsx
+function Hello() {
+  return (
+    <div>
+      <h1>Hello I am Cristiano Ronaldo !</h1>
+    </div>
+  );
+}
+export default Hello;
+
++ Hiểu biết về cách sử dụng PROPS . props.thuộc tính nào đó mà thuộc tính chẳng hạn như name , message được code bên App.jsx . Props giúp mình ghi được giá trị mình mong muốn 
+// Code ở App.jsx 
+import Hello from "./components/Hello";
+function App() {
+  return (
+    <div className="App">
+      <Hello name="Cristiano Ronaldo" />
+      <Hello name="Lionel Messi" />
+    </div>
+  );
+}
+export default App;
+
+// Code ở Hello.jsx
+function Hello(props) {
+  return (
+    <div>
+      <h1>Hello I am {props.name} !</h1>
+    </div>
+  );
+}
+export default Hello;
+
+
+

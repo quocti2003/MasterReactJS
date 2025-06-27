@@ -1,0 +1,81 @@
+-- Bài học từ 2 video 11 - 12 : 
+// Code tại App.jsx 
+import Hello from "./components/Hello";
+function App() {
+  const person = {
+    name: "Cristiano Ronaldo",
+    club: "Al Nassr",
+    message: "Successfully renewed contract with ",
+    emoji: "⚽",
+    seatNumber: [2027],
+  };
+  return (
+    <div className="App">
+      <Hello person={person} />
+    </div>
+  );
+}
+export default App;
+
+// Code tại Hello.jsx 
+function Hello(props) {
+  return (
+    <div>
+      <h1>
+        Congratulation {props.person.name} {props.person.emoji}{" "}
+        {props.person.message}
+        {props.person.club} to {props.person.seatNumber}
+      </h1>
+    </div>
+  );
+}
+export default Hello; 
+
+=> Lưu 2 file và chạy ra được " Congratulation Cristiano Ronaldo ⚽ Successfully renewed contract with Al Nassr to 2027 " 
+
+-- Bài học từ video 13 , 14 , 15 
++ Tạo file mới của folder Components là CR7.jsx 
+// Code ở App.jsx 
+import CR7 from "./components/CR7";
+import Hello from "./components/Hello";
+function App() {
+  return (
+    <div className="App">
+      <CR7 />
+    </div>
+  );
+}
+export default App;
+
+
+// Code ở CR7.jsx 
+export default function CR7() {
+  //const clubs = ["Sporting Lisbon", "Manchester United", "Real Madrid", "Juventus", "Al Nassr" , "Portugal National Team"];
+  const clubs = [
+    { name: "Sporting Lisbon", join: "2002-2003", emoji: "⚽️" },
+    { name: "Manchester United", join: "2003-2009", emoji: "⚽️" },
+    { name: "Real Madrid", join: "2009-2018", emoji: "⚽️" },
+    { name: "Juventus", join: "2018-2021", emoji: "⚽️" },
+    { name: "Manchester United", join: "2021-2022", emoji: "⚽️" },
+    { name: "Al Nassr", join: "2023-present", emoji: "⚽️" },
+    { name: "Portugal National Team", join: "2003-present", emoji: "🇵🇹" },
+  ];
+  return (
+    <div>
+      <ul>
+        {clubs.map((club) => (
+          <li key={club.name}>
+            {""}
+            {club.name} {club.emoji} : he joins {club.join}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+
+
+
+
+

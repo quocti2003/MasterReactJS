@@ -1,0 +1,59 @@
+// App.jsx 
+import ConditionalComponents from "./components/ConditionComponents";
+import CR7 from "./components/CR7";
+import Fruits from "./components/Fruits";
+import Hello from "./components/Hello";
+function App() {
+  return (
+    <div className="App">
+      <CR7 />
+    </div>
+  );
+}
+
+export default App;
+
+// CR7.jsx
+import Club from "./Club";
+export default function CR7() {
+  //const clubs = ["Sporting Lisbon", "Manchester United", "Real Madrid", "Juventus", "Al Nassr" , "Portugal National Team"];
+  const clubs = [
+    { name: "Sporting Lisbon", join: "2002-2003", emoji: "⚽️" },
+    { name: "Manchester United", join: "2003-2009", emoji: "⚽️" },
+    { name: "Real Madrid", join: "2009-2018", emoji: "⚽️" },
+    { name: "Juventus", join: "2018-2021", emoji: "⚽️" },
+    { name: "Manchester United", join: "2021-2022", emoji: "⚽️" },
+    { name: "Al Nassr", join: "2023-present", emoji: "⚽️" },
+    { name: "Portugal National Team", join: "2003-present", emoji: "🇵🇹" },
+  ];
+  return (
+    <div>
+      <h1>
+        {clubs.map((club) => (
+          <Club
+            key={club.name + club.join}
+            name={club.name}
+            join={club.join}
+            emoji={club.emoji}
+          />
+        ))}
+      </h1>
+    </div>
+  );
+}
+
+// Club.jsx
+export default function Club({ name, join, emoji }) {
+  const [start, end] = join.split("-");
+
+  const startYear = parseInt(start);
+  const endYear = end === "present" ? new Date().getFullYear() : parseInt(end);
+  const duration = endYear - startYear;
+
+  if (duration <= 5) return null;
+  return (
+    <li>
+      {name} {emoji} : he joins {join} ({duration} years)
+    </li>
+  );
+}

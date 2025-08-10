@@ -1,0 +1,133 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, 
+    #667eea 0%, 
+    #764ba2 50%,
+    #f093fb 100%);
+  color: white;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.header.shrink {
+  padding: 15px 0 5px 0;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header.shrink.expand-on-hover {
+  padding: 40px 0 20px 0;
+  transition: all 0.4s ease;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.site-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.header.shrink .site-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.header.shrink.expand-on-hover .site-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+
+.site-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-description {
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  padding: 0 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px 35px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Add decorative elements */
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 0 50px 0;
+  }
+
+  .header.shrink {
+    padding: 12px 0;
+  }
+
+  .header.shrink.expand-on-hover {
+    padding: 30px 0 50px 0;
+  }
+
+  .site-title {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+
+  .header.shrink .site-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .header.shrink.expand-on-hover .site-title {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+
+  .site-tagline {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .header-description {
+    font-size: 0.9rem;
+    padding: 20px 25px;
+  }
+}

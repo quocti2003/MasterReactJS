@@ -1,0 +1,57 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore unnecessary components - chỉ giữ lại giao diện chính
+src/components/sections/AboutUs.jsx
+src/components/sections/AboutUs.css
+src/components/sections/ContemporaryCalligraphy.jsx
+src/components/sections/ContemporaryCalligraphy.css
+src/components/sections/FontShowcase.jsx
+src/components/sections/FontShowcase.css
+src/components/sections/HandLettering.jsx
+src/components/sections/HandLettering.css
+src/components/sections/ModernCalligraphy.jsx
+src/components/sections/ModernCalligraphy.css
+
+# Ignore unnecessary UI components
+src/components/ui/FilterButtons.jsx
+src/components/ui/FilterButtons.css
+src/components/ui/GalleryCard.jsx
+src/components/ui/GalleryCard.css
+src/components/ui/Loader.jsx
+src/components/ui/Loader.css
+src/components/ui/Modal.jsx
+src/components/ui/Modal.css
+
+# Ignore hooks không cần thiết
+src/hooks/useGeolocation.js
+src/hooks/useScrollAnimation.js
+
+# Ignore project files
+ARCHITECT.txt
+README.md
+eslint.config.js
+package-lock.json
+vite.config.js

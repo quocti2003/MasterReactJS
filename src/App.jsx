@@ -99,17 +99,17 @@ function App() {
           <TraditionalCalligraphy />
         </section>
 
-        {/* <section id="contemporary" ref={el => sectionsRef.current.contemporary = el}>
+        <section id="contemporary" ref={el => sectionsRef.current.contemporary = el}>
           <ContemporaryCalligraphy />
-        </section> */}
+        </section>
 
-        {/* <section id="modern" ref={el => sectionsRef.current.modern = el}>
+        <section id="modern" ref={el => sectionsRef.current.modern = el}>
           <ModernCalligraphy />
-        </section> */}
+        </section>
 
-        {/* <section id="hand-lettering" ref={el => sectionsRef.current['hand-lettering'] = el}>
+        <section id="hand-lettering" ref={el => sectionsRef.current['hand-lettering'] = el}>
           <HandLettering />
-        </section> */}
+        </section>
 
         <section id="gallery" ref={el => sectionsRef.current.gallery = el}>
           <Gallery />
@@ -119,9 +119,9 @@ function App() {
           <FontShowcase />
         </section>
 
-        {/* <section id="about" ref={el => sectionsRef.current.about = el}>
+        <section id="about" ref={el => sectionsRef.current.about = el}>
           <AboutUs />
-        </section> */}
+        </section>
 
         <section id="contact" ref={el => sectionsRef.current.contact = el}>
           <ContactUs />

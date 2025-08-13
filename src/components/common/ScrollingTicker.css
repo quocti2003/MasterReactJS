@@ -20,9 +20,9 @@
 .ticker-track {
   display: flex;
   gap: 60px;
-  animation: scroll 30s linear infinite;
+  animation: scroll 20s linear infinite;
   white-space: nowrap;
-  padding-left: 100%;
+  width: 200%;
 }
 
 @keyframes scroll {
@@ -30,7 +30,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -55,10 +55,10 @@
   letter-spacing: 0.5px;
 }
 
-/* Hover effect to pause scrolling */
-.ticker-container:hover .ticker-track {
+/* Removed hover pause effect - ticker continues running */
+/* .ticker-container:hover .ticker-track {
   animation-play-state: paused;
-}
+} */
 
 /* Gradient overlay for smooth edges */
 .ticker-container::before,
@@ -89,7 +89,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .ticker-track {
-    animation-duration: 25s;
+    animation-duration: 18s;
   }
 }
 
@@ -109,7 +109,7 @@
 
   .ticker-track {
     gap: 40px;
-    animation-duration: 20s;
+    animation-duration: 15s;
   }
 
   .ticker-container::before,
@@ -134,7 +134,7 @@
 
   .ticker-track {
     gap: 30px;
-    animation-duration: 15s;
+    animation-duration: 12s;
   }
 
   .ticker-message {

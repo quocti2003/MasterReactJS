@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import FilterButtons from '../ui/FilterButtons'
 import GalleryCard from '../ui/GalleryCard'
 import './Gallery.css'
@@ -13,56 +12,56 @@ const Gallery = () => {
       id: 1,
       title: 'Arabic Calligraphy',
       category: 'arabic',
-      image: '/images/arabic/arabic1.jpg',
+      image: '/calligraphy-images/arabic/arabic1.jpg',
       description: 'Beautiful flowing Arabic script with geometric patterns'
     },
     {
       id: 2,
       title: 'Chinese Characters',
       category: 'chinese',
-      image: '/images/chinese/chinese1.jpg',
+      image: '/calligraphy-images/chinese/chinese1.jpg',
       description: 'Traditional Chinese brush calligraphy'
     },
     {
       id: 3,
       title: 'Greek Letters',
       category: 'greek',
-      image: '/images/greek/greek1.jpg',
+      image: '/calligraphy-images/greek/greek1.jpg',
       description: 'Classical Greek letterforms'
     },
     {
       id: 4,
       title: 'Indic Scripts',
       category: 'indic',
-      image: '/images/indic/indic1.jpg',
+      image: '/calligraphy-images/indic/indic1.jpg',
       description: 'Sanskrit and Devanagari calligraphy'
     },
     {
       id: 5,
       title: 'Gothic Style',
       category: 'western',
-      image: '/images/western/gothic1.jpg',
+      image: '/calligraphy-images/western/gothic1.jpg',
       description: 'Medieval Gothic blackletter'
     },
     {
       id: 6,
       title: 'Modern Brush',
       category: 'modern',
-      image: '/images/modern/modern1.jpg',
+      image: '/calligraphy-images/modern/modern1.jpg',
       description: 'Contemporary brush lettering'
     },
     {
       id: 7,
       title: 'Japanese Kanji',
       category: 'japanese',
-      image: '/images/japanese/japanese1.jpg',
+      image: '/calligraphy-images/japanese/japanese1.jpg',
       description: 'Elegant Japanese calligraphy'
     },
     {
       id: 8,
       title: 'Copperplate',
       category: 'western',
-      image: '/images/western/copperplate1.jpg',
+      image: '/calligraphy-images/western/copperplate1.jpg',
       description: 'Classic Copperplate script'
     }
   ]
@@ -85,17 +84,12 @@ const Gallery = () => {
   return (
     <div className="gallery-section">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="section-header"
-        >
+        <div className="section-header">
           <h2 className="section-title">Calligraphy Gallery</h2>
           <p className="section-subtitle">
             Explore diverse calligraphic styles from around the world
           </p>
-        </motion.div>
+        </div>
 
         <FilterButtons 
           filters={filters}
@@ -103,11 +97,7 @@ const Gallery = () => {
           onFilterChange={setSelectedFilter}
         />
 
-        <motion.div 
-          className="gallery-grid"
-          layout
-        >
-          <AnimatePresence>
+        <div className="gallery-grid">
             {filteredItems.map((item, index) => (
               <GalleryCard
                 key={item.id}
@@ -116,26 +106,18 @@ const Gallery = () => {
                 onClick={() => setSelectedImage(item)}
               />
             ))}
-          </AnimatePresence>
-        </motion.div>
+        </div>
 
         {/* Modal for enlarged image */}
-        <AnimatePresence>
-          {selectedImage && (
-            <motion.div
-              className="modal-overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedImage(null)}
+        {selectedImage && (
+          <div
+            className="modal-overlay"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div
+              className="modal-content"
+              onClick={(e) => e.stopPropagation()}
             >
-              <motion.div
-                className="modal-content"
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.8 }}
-                onClick={(e) => e.stopPropagation()}
-              >
                 <button 
                   className="modal-close"
                   onClick={() => setSelectedImage(null)}
@@ -151,10 +133,9 @@ const Gallery = () => {
                   <h3>{selectedImage.title}</h3>
                   <p>{selectedImage.description}</p>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           )}
-        </AnimatePresence>
       </div>
     </div>
   )

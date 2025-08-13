@@ -1,0 +1,82 @@
+.compact-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: linear-gradient(135deg, 
+    #667eea 0%, 
+    #764ba2 50%,
+    #f093fb 100%);
+  color: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.compact-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.compact-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.compact-visitor {
+  display: flex;
+  align-items: center;
+}
+
+/* Make sure navigation is part of compact header */
+.compact-header .navigation {
+  position: static;
+  top: auto;
+  background: transparent;
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.compact-header .nav-wrapper {
+  padding: 8px 20px;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .compact-header-content {
+    padding: 10px 15px;
+  }
+  
+  .compact-title {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+  }
+  
+  .compact-visitor {
+    display: none; /* Hide on mobile since main visitor counter is visible */
+  }
+  
+  .compact-header .nav-wrapper {
+    padding: 8px 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .compact-header-content {
+    padding: 15px 30px;
+  }
+  
+  .compact-title {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    letter-spacing: 2px;
+  }
+  
+  .compact-header .nav-wrapper {
+    padding: 10px 30px;
+  }
+}

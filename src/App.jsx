@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-// eslint-disable-next-line no-unused-vars
-import { AnimatePresence } from 'framer-motion'
 import './App.css'
 
 // Components
@@ -16,15 +14,15 @@ import TraditionalCalligraphy from './components/sections/TraditionalCalligraphy
 import ContemporaryCalligraphy from './components/sections/ContemporaryCalligraphy'
 import ModernCalligraphy from './components/sections/ModernCalligraphy'
 import HandLettering from './components/sections/HandLettering'
-import Gallery from './components/sections/Gallery'
+import CalligraphyFilter from './components/sections/CalligraphyFilter'
+import FontShowcase from './components/sections/FontShowcase'
 import AboutUs from './components/sections/AboutUs'
 import ContactUs from './components/sections/ContactUs'
 import Feedback from './components/sections/Feedback'
-import Sitemap from './components/sections/Sitemap'
-import FontShowcase from './components/sections/FontShowcase'
 
 // UI Components
 import Loader from './components/ui/Loader'
+import ScrollToTop from './components/ui/ScrollToTop'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -42,16 +40,16 @@ function App() {
   }, [])
 
   useEffect(() => {
-    // Intersection Observer for section tracking
+    // Improved Intersection Observer for better section tracking
     const options = {
       root: null,
-      rootMargin: '-50% 0px',
-      threshold: 0
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: [0, 0.1, 0.5, 0.9]
     }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
           setActiveSection(entry.target.id)
         }
       })
@@ -68,7 +66,14 @@ function App() {
   const scrollToSection = (sectionId) => {
     const section = sectionsRef.current[sectionId]
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      const headerHeight = window.innerWidth >= 1024 ? 120 : 60
+      const elementPosition = section.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
       setIsMobileMenuOpen(false)
     }
   }
@@ -111,9 +116,10 @@ function App() {
           <HandLettering />
         </section>
 
-        <section id="gallery" ref={el => sectionsRef.current.gallery = el}>
-          <Gallery />
+        <section id="filter" ref={el => sectionsRef.current.filter = el}>
+          <CalligraphyFilter />
         </section>
+
 
         <section id="fonts" ref={el => sectionsRef.current.fonts = el}>
           <FontShowcase />
@@ -131,13 +137,11 @@ function App() {
           <Feedback />
         </section>
 
-        <section id="sitemap" ref={el => sectionsRef.current.sitemap = el}>
-          <Sitemap />
-        </section>
       </main>
 
       <Footer scrollToSection={scrollToSection} />
       <ScrollingTicker />
+      <ScrollToTop />
     </div>
   )
 }

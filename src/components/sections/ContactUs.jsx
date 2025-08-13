@@ -1,133 +1,95 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaUsers } from 'react-icons/fa'
 import './ContactUs.css'
 
 const ContactUs = () => {
-  const contactInfo = {
-    phone: '+1 (555) 123-4567',
-    email: 'info@scratchynib.com',
-    address: '123 Calligraphy Lane, Art District, San Francisco, CA 94102',
-    hours: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed'
-  }
-
-  const socialLinks = [
-    { icon: <FaFacebook />, url: '#', label: 'Facebook' },
-    { icon: <FaTwitter />, url: '#', label: 'Twitter' },
-    { icon: <FaInstagram />, url: '#', label: 'Instagram' },
-    { icon: <FaLinkedin />, url: '#', label: 'LinkedIn' }
+  const teamMembers = [
+    {
+      name: 'Edric',
+      email: 'edricvn24@gmail.com',
+      address: '21bis Hậu Giang, Phường Tân Sơn Nhất, TP. HCM',
+      phone: '0901471134',
+      role: 'Team Lead'
+    },
+    {
+      name: 'Hoang Huynh Hieu',
+      email: 'hoanghuynhhieu123333@gmail.com',
+      address: '22bis Hậu Giang, Phường Tân Sơn Nhất, TP. HCM',
+      phone: '0901471135',
+      role: 'Developer, Business Analysist'
+    },
+    {
+      name: 'Huy',
+      email: 'huygetamped748366@gmail.com',
+      address: '23bis Hậu Giang, Phường Tân Sơn Nhất, TP. HCM',
+      phone: '0901471136',
+      role: 'Developer, Software Architect'
+    }
   ]
 
   return (
     <div className="contact-section">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="section-header"
-        >
-          <h2 className="section-title">Get in Touch</h2>
+        <div className="section-header">
+          <h2 className="section-title">Contact Our Team</h2>
           <p className="section-subtitle">
-            We'd love to hear from you and help you on your calligraphy journey
+            Get in touch with our calligraphy experts for guidance and collaboration
           </p>
-        </motion.div>
-
-        <div className="contact-content">
-          <motion.div 
-            className="contact-info-card"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3 className="info-title">Contact Information</h3>
-            
-            <div className="info-item">
-              <div className="info-icon">
-                <FaPhone />
-              </div>
-              <div className="info-details">
-                <h4>Phone</h4>
-                <p>{contactInfo.phone}</p>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <div className="info-icon">
-                <FaEnvelope />
-              </div>
-              <div className="info-details">
-                <h4>Email</h4>
-                <p>{contactInfo.email}</p>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <div className="info-icon">
-                <FaMapMarkerAlt />
-              </div>
-              <div className="info-details">
-                <h4>Address</h4>
-                <p>{contactInfo.address}</p>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <div className="info-icon">
-                <FaClock />
-              </div>
-              <div className="info-details">
-                <h4>Business Hours</h4>
-                <p style={{ whiteSpace: 'pre-line' }}>{contactInfo.hours}</p>
-              </div>
-            </div>
-
-            <div className="social-links">
-              <h4>Follow Us</h4>
-              <div className="social-icons">
-                {socialLinks.map((link, index) => (
-                  <motion.a
-                    key={index}
-                    href={link.url}
-                    className="social-icon"
-                    aria-label={link.label}
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    {link.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            className="contact-map"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="map-placeholder">
-              <div className="map-content">
-                <FaMapMarkerAlt className="map-icon" />
-                <h3>Visit Our Studio</h3>
-                <p>Experience the art of calligraphy in person</p>
-                <button className="btn btn-primary">Get Directions</button>
-              </div>
-            </div>
-          </motion.div>
         </div>
 
-        <motion.div 
-          className="contact-cta"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <h3>Ready to Start Your Calligraphy Journey?</h3>
-          <p>Join our workshops and discover the beauty of handwritten art</p>
-          <button className="btn btn-primary">Book a Workshop</button>
-        </motion.div>
+        <div className="team-contact-grid">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="member-contact-card">
+              <div className="member-header">
+                <div className="member-avatar">
+                  <FaUser />
+                </div>
+                <div className="member-info">
+                  <h3 className="member-name">{member.name}</h3>
+                  <p className="member-role">{member.role}</p>
+                </div>
+              </div>
+
+              <div className="contact-details">
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <FaEnvelope />
+                  </div>
+                  <div className="contact-text">
+                    <h4>Email</h4>
+                    <a href={`mailto:${member.email}`} className="contact-link">
+                      {member.email}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <FaMapMarkerAlt />
+                  </div>
+                  <div className="contact-text">
+                    <h4>Address</h4>
+                    <p>{member.address}</p>
+                  </div>
+                </div>
+
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <FaPhone />
+                  </div>
+                  <div className="contact-text">
+                    <h4>Contact Number</h4>
+                    <a href={`tel:${member.phone}`} className="contact-link">
+                      {member.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
       </div>
     </div>
   )

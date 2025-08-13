@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { FaStar, FaUser, FaEnvelope, FaComment } from 'react-icons/fa'
+import React, { useState, useEffect } from 'react'
+import { FaStar, FaUser, FaEnvelope, FaComment, FaClock } from 'react-icons/fa'
 import './Feedback.css'
 
 const Feedback = () => {
@@ -13,6 +12,8 @@ const Feedback = () => {
 
   const [submitted, setSubmitted] = useState(false)
   const [hoveredStar, setHoveredStar] = useState(0)
+  const [allFeedbacks, setAllFeedbacks] = useState([])
+  const [showAllFeedbacks, setShowAllFeedbacks] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -29,15 +30,32 @@ const Feedback = () => {
     }))
   }
 
+  // Load feedbacks from localStorage on component mount
+  useEffect(() => {
+    loadFeedbacks()
+  }, [])
+
+  const loadFeedbacks = () => {
+    const feedbacks = JSON.parse(localStorage.getItem('feedbacks') || '[]')
+    // Sort by newest first
+    feedbacks.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+    setAllFeedbacks(feedbacks)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     // Store feedback in localStorage (simulating database)
     const feedbacks = JSON.parse(localStorage.getItem('feedbacks') || '[]')
-    feedbacks.push({
+    const newFeedback = {
       ...formData,
-      timestamp: new Date().toISOString()
-    })
+      timestamp: new Date().toISOString(),
+      id: Date.now() // Simple ID generation
+    }
+    feedbacks.push(newFeedback)
     localStorage.setItem('feedbacks', JSON.stringify(feedbacks))
+    
+    // Reload feedbacks to show the new one
+    loadFeedbacks()
     
     setSubmitted(true)
     setTimeout(() => {
@@ -51,15 +69,21 @@ const Feedback = () => {
     }, 3000)
   }
 
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp)
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    })
+  }
+
   return (
     <div className="feedback-section">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="feedback-content"
-        >
+        <div className="feedback-content">
           <div className="section-header">
             <h2 className="section-title">Share Your Feedback</h2>
             <p className="section-subtitle">
@@ -68,22 +92,15 @@ const Feedback = () => {
           </div>
 
           {submitted ? (
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="success-message"
-            >
+            <div className="success-message">
               <div className="success-icon">✓</div>
               <h3>Thank You!</h3>
               <p>Your feedback has been successfully submitted.</p>
-            </motion.div>
+            </div>
           ) : (
-            <motion.form
+            <form
               className="feedback-form"
               onSubmit={handleSubmit}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
             >
               <div className="form-row">
                 <div className="form-group">
@@ -160,24 +177,62 @@ const Feedback = () => {
                 />
               </div>
 
-              <motion.button
+              <button
                 type="submit"
                 className="btn btn-primary submit-btn"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 Submit Feedback
-              </motion.button>
-            </motion.form>
+              </button>
+            </form>
+          )}
+
+          {/* User Submitted Feedbacks */}
+          {allFeedbacks.length > 0 && (
+            <div className="user-feedbacks">
+              <div className="feedbacks-header">
+                <h3 className="feedbacks-title">Community Feedback</h3>
+                <button 
+                  className="toggle-feedbacks-btn"
+                  onClick={() => setShowAllFeedbacks(!showAllFeedbacks)}
+                >
+                  {showAllFeedbacks ? 'Show Less' : `View All (${allFeedbacks.length})`}
+                </button>
+              </div>
+              
+              <div className="user-feedbacks-grid">
+                {(showAllFeedbacks ? allFeedbacks : allFeedbacks.slice(0, 3)).map((feedback) => (
+                  <div key={feedback.id} className="user-feedback-card">
+                    <div className="feedback-header">
+                      <div className="feedback-user">
+                        <FaUser className="user-icon" />
+                        <span className="user-name">{feedback.name}</span>
+                      </div>
+                      <div className="feedback-rating">
+                        {[...Array(5)].map((_, i) => (
+                          <FaStar 
+                            key={i} 
+                            className={`star-icon ${i < feedback.rating ? 'active' : ''}`} 
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <p className="feedback-message">{feedback.message}</p>
+                    
+                    <div className="feedback-timestamp">
+                      <FaClock className="clock-icon" />
+                      <span>{formatDate(feedback.timestamp)}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
 
           <div className="testimonials">
-            <h3 className="testimonials-title">What Others Say</h3>
+            <h3 className="testimonials-title">Featured Testimonials</h3>
             <div className="testimonial-cards">
-              <motion.div 
-                className="testimonial-card"
-                whileHover={{ y: -5 }}
-              >
+              <div className="testimonial-card">
                 <div className="testimonial-rating">
                   {[...Array(5)].map((_, i) => (
                     <FaStar key={i} className="star-icon" />
@@ -187,12 +242,9 @@ const Feedback = () => {
                   "Learning calligraphy here has been an incredible journey. The variety of styles and expert guidance is amazing!"
                 </p>
                 <p className="testimonial-author">- Sarah M.</p>
-              </motion.div>
+              </div>
 
-              <motion.div 
-                className="testimonial-card"
-                whileHover={{ y: -5 }}
-              >
+              <div className="testimonial-card">
                 <div className="testimonial-rating">
                   {[...Array(5)].map((_, i) => (
                     <FaStar key={i} className="star-icon" />
@@ -202,10 +254,10 @@ const Feedback = () => {
                   "The perfect blend of tradition and modern techniques. I've discovered my passion for hand lettering!"
                 </p>
                 <p className="testimonial-author">- David L.</p>
-              </motion.div>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

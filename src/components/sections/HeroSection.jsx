@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 import { FaFeatherAlt, FaPaintBrush, FaPenNib } from 'react-icons/fa'
 import './HeroSection.css'
 
@@ -35,18 +34,8 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <div className="container">
-        <motion.div
-          className="hero-content"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <motion.div
-            className="hero-text"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+        <div className="hero-content">
+          <div className="hero-text">
             <h1 className="hero-title">
               The Art of{' '}
               <span className="animated-word">
@@ -60,22 +49,9 @@ const HeroSection = () => {
               and every letter becomes a masterpiece.
             </p>
 
-            <div className="hero-buttons">
-              <button className="btn btn-primary">
-                Explore Styles
-              </button>
-              <button className="btn btn-secondary">
-                View Gallery
-              </button>
-            </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="hero-visual"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          >
+          <div className="hero-visual">
             <div className="calligraphy-showcase">
               <svg viewBox="0 0 400 200" className="svg-calligraphy">
                 <defs>
@@ -97,28 +73,21 @@ const HeroSection = () => {
                 </text>
               </svg>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
-        <motion.div
-          className="features-grid"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
+        <div className="features-grid">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
               className="feature-card"
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="feature-icon">{feature.icon}</div>
               <h3 className="feature-title">{feature.title}</h3>
               <p className="feature-description">{feature.description}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   )

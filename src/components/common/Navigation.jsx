@@ -1,24 +1,36 @@
 import React, { useState, useEffect } from 'react'
-// eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from 'framer-motion'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { 
+  FaBars, 
+  FaTimes, 
+  FaHome, 
+  FaScroll, 
+  FaPaintBrush, 
+  FaPenFancy, 
+  FaPenNib, 
+  FaFilter,
+  FaImages, 
+  FaFont, 
+  FaInfoCircle, 
+  FaEnvelope, 
+  FaCommentAlt,
+  FaSitemap 
+} from 'react-icons/fa'
 import './Navigation.css'
 
 const Navigation = ({ activeSection, scrollToSection, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const menuItems = [
-    { id: 'home', label: 'Home', icon: '' },
-    { id: 'traditional', label: 'Traditional', icon: '' },
-    { id: 'contemporary', label: 'Contemporary', icon: '' },
-    { id: 'modern', label: 'Modern', icon: '' },
-    { id: 'hand-lettering', label: 'Hand Lettering', icon: '' },
-    { id: 'gallery', label: 'Gallery', icon: '' },
-    { id: 'fonts', label: 'Typography', icon: '' },
-    { id: 'about', label: 'About Us', icon: '' },
-    { id: 'contact', label: 'Contact', icon: '' },
-    { id: 'feedback', label: 'Feedback', icon: '' },
-    { id: 'sitemap', label: 'Site Map', icon: '' }
+    { id: 'home', label: 'Home', icon: <FaHome /> },
+    { id: 'traditional', label: 'Traditional', icon: <FaScroll /> },
+    { id: 'contemporary', label: 'Contemporary', icon: <FaPaintBrush /> },
+    { id: 'modern', label: 'Modern', icon: <FaPenFancy /> },
+    { id: 'hand-lettering', label: 'Hand Lettering', icon: <FaPenNib /> },
+    { id: 'filter', label: 'Gallery', icon: <FaImages /> },
+    { id: 'fonts', label: 'Typography', icon: <FaFont /> },
+    { id: 'about', label: 'About Us', icon: <FaInfoCircle /> },
+    { id: 'contact', label: 'Contact', icon: <FaEnvelope /> },
+    { id: 'feedback', label: 'Feedback', icon: <FaCommentAlt /> }
   ]
 
   useEffect(() => {
@@ -43,15 +55,13 @@ const Navigation = ({ activeSection, scrollToSection, isMobileMenuOpen, setIsMob
               {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
 
+            {/* Mobile Logo */}
+            <h2 className="mobile-logo">Scratchy Nib</h2>
+
             {/* Desktop Navigation */}
             <ul className="nav-menu desktop-menu">
               {menuItems.map((item, index) => (
-                <motion.li
-                  key={item.id}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
+                <li key={item.id}>
                   <button
                     className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
                     onClick={() => scrollToSection(item.id)}
@@ -65,7 +75,7 @@ const Navigation = ({ activeSection, scrollToSection, isMobileMenuOpen, setIsMob
                     <span className="nav-icon">{item.icon}</span>
                     <span className="nav-label">{item.label}</span>
                   </button>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </div>
@@ -73,30 +83,16 @@ const Navigation = ({ activeSection, scrollToSection, isMobileMenuOpen, setIsMob
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.div
-              className="mobile-menu-overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.div
-              className="mobile-menu"
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
-            >
+      {isMobileMenuOpen && (
+        <>
+          <div
+            className="mobile-menu-overlay"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          <div className="mobile-menu">
               <ul className="mobile-nav-list">
                 {menuItems.map((item) => (
-                  <motion.li
-                    key={item.id}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
+                  <li key={item.id}>
                     <button
                       className={`mobile-nav-link ${activeSection === item.id ? 'active' : ''}`}
                       onClick={() => scrollToSection(item.id)}
@@ -104,13 +100,12 @@ const Navigation = ({ activeSection, scrollToSection, isMobileMenuOpen, setIsMob
                       <span className="nav-icon">{item.icon}</span>
                       <span className="nav-label">{item.label}</span>
                     </button>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </>
         )}
-      </AnimatePresence>
     </>
   )
 }

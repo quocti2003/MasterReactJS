@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import { FaHeart } from 'react-icons/fa'
 import './Footer.css'
 
@@ -32,25 +31,15 @@ const Footer = ({ scrollToSection }) => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <motion.div 
-            className="footer-section"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="footer-section">
             <h3 className="footer-title calligraphic-title">Scratchy Nib</h3>
             <p className="footer-description">
               Preserving the ancient art of beautiful writing for modern times.
               Join us in celebrating the timeless elegance of calligraphy.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="footer-section"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+          <div className="footer-section">
             <h4 className="footer-heading">Site Map</h4>
             <ul className="footer-links">
               {siteMapLinks.map(link => (
@@ -64,14 +53,9 @@ const Footer = ({ scrollToSection }) => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="footer-section"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div className="footer-section">
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
               {quickLinks.map(link => (
@@ -85,14 +69,9 @@ const Footer = ({ scrollToSection }) => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="footer-section"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
+          <div className="footer-section">
             <h4 className="footer-heading">Newsletter</h4>
             <p className="footer-text">
               Subscribe to receive updates on workshops and calligraphy tips
@@ -109,12 +88,12 @@ const Footer = ({ scrollToSection }) => {
                 Subscribe
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
 
         <div className="footer-bottom">
           <p className="copyright">
-            © 2024 Scratchy Nib. Made with <FaHeart className="heart-icon" /> for calligraphy lovers
+            © 2025 Scratchy Nib. Made with <FaHeart className="heart-icon" /> for calligraphy lovers
           </p>
         </div>
       </div>

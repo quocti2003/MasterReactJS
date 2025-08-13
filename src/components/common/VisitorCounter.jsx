@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion'
-import { FaUsers, FaEye } from 'react-icons/fa'
+import { FaUsers } from 'react-icons/fa'
 import './VisitorCounter.css'
 
 const VisitorCounter = () => {
@@ -48,18 +46,10 @@ const VisitorCounter = () => {
   }
 
   return (
-    <motion.div 
-      className="visitor-counter"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay: 1 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
+    <div className="visitor-counter">
       <div className="counter-content">
         <div className="counter-icon-wrapper">
           <FaUsers className="counter-icon" />
-          <FaEye className="counter-icon-secondary" />
         </div>
         <div className="counter-text">
           <span className="counter-label">Visitors</span>
@@ -71,7 +61,7 @@ const VisitorCounter = () => {
       
       {/* Decorative gradient border */}
       <div className="counter-border"></div>
-    </motion.div>
+    </div>
   )
 }
 

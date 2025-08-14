@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Pacifico&family=Satisfy&display=swap');
+
 /* Header - Fully Responsive Design */
 .header {
   position: relative;
@@ -160,7 +162,6 @@
 }
 
 /* Title with Beautiful Calligraphic Font */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Pacifico&family=Satisfy&display=swap');
 
 .site-title {
   font-family: 'Dancing Script', 'Pacifico', cursive;
@@ -177,26 +178,25 @@
   /* Solid white color as fallback */
   color: #ffffff;
   
-  /* Beautiful gold gradient */
-  background: linear-gradient(90deg, 
+  /* Beautiful elegant gradient */
+  background: linear-gradient(135deg, 
     #ffffff 0%,
-    #ffe57f 20%,
-    #ffd700 40%,
-    #ffed4e 60%,
-    #ffd700 80%,
+    #f1f5f9 25%,
+    #e2e8f0 50%,
+    #cbd5e0 75%,
     #ffffff 100%);
-  background-size: 200% auto;
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  /* Strong text shadow for better visibility */
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))
-          drop-shadow(0 0 10px rgba(255, 215, 0, 0.5))
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  /* Elegant text effects */
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4))
+          drop-shadow(0 0 12px rgba(255, 255, 255, 0.8))
+          drop-shadow(0 0 20px rgba(200, 220, 255, 0.5));
   
-  /* Smooth animation */
-  animation: goldGlow 3s ease-in-out infinite;
+  /* Gentle shimmer animation */
+  animation: elegantShimmer 4s ease-in-out infinite;
   
   /* Better text rendering */
   -webkit-font-smoothing: antialiased;
@@ -205,18 +205,18 @@
 }
 
 /* Animation for the title */
-@keyframes goldGlow {
+@keyframes elegantShimmer {
   0%, 100% { 
-    background-position: 0% center;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))
-            drop-shadow(0 0 10px rgba(255, 215, 0, 0.5))
-            drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    background-position: 0% 50%;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4))
+            drop-shadow(0 0 12px rgba(255, 255, 255, 0.8))
+            drop-shadow(0 0 20px rgba(200, 220, 255, 0.5));
   }
   50% { 
-    background-position: 100% center;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6))
-            drop-shadow(0 0 15px rgba(255, 215, 0, 0.7))
-            drop-shadow(0 0 25px rgba(255, 255, 255, 0.4));
+    background-position: 100% 50%;
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5))
+            drop-shadow(0 0 16px rgba(255, 255, 255, 1.0))
+            drop-shadow(0 0 25px rgba(200, 220, 255, 0.7));
   }
 }
 
@@ -224,10 +224,11 @@
 @supports not (-webkit-background-clip: text) {
   .site-title {
     background: none;
-    color: #ffd700;
+    color: #ffffff;
     text-shadow: 
-      2px 2px 4px rgba(0, 0, 0, 0.5),
-      0 0 10px rgba(255, 255, 255, 0.3);
+      1px 1px 3px rgba(0, 0, 0, 0.4),
+      0 0 12px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(200, 220, 255, 0.5);
   }
 }
 
@@ -237,7 +238,7 @@
 
 .site-tagline {
   font-size: clamp(1rem, 3vw, 1.4rem);
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.95) !important;
   font-style: italic;
   margin-bottom: clamp(15px, 3vw, 20px);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -274,7 +275,7 @@
 
 .origin-text {
   font-size: clamp(0.95rem, 2vw, 1.15rem);
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.95) !important;
   line-height: 1.7;
   margin: 0;
   text-align: center;

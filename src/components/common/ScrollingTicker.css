@@ -20,14 +20,15 @@
 .ticker-track {
   display: flex;
   gap: 60px;
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
   white-space: nowrap;
-  width: 200%;
+  width: max-content;
+  will-change: transform;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
@@ -89,7 +90,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .ticker-track {
-    animation-duration: 18s;
+    animation-duration: 25s;
   }
 }
 
@@ -109,7 +110,7 @@
 
   .ticker-track {
     gap: 40px;
-    animation-duration: 15s;
+    animation-duration: 20s;
   }
 
   .ticker-container::before,
@@ -134,7 +135,7 @@
 
   .ticker-track {
     gap: 30px;
-    animation-duration: 12s;
+    animation-duration: 15s;
   }
 
   .ticker-message {

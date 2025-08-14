@@ -41,53 +41,39 @@ const ScrollingTicker = () => {
     return 'Location unavailable'
   }
 
+  const tickerItems = [
+    {
+      icon: <FaCalendarAlt className="ticker-icon" />,
+      text: formatDate(currentTime)
+    },
+    {
+      icon: <FaClock className="ticker-icon" />,
+      text: formatTime(currentTime)
+    },
+    {
+      icon: <FaMapMarkerAlt className="ticker-icon" />,
+      text: getLocationString()
+    },
+    {
+      icon: null,
+      text: "🎨 Welcome to Scratchy Nib - Where Every Stroke Tells a Story",
+      className: "ticker-message"
+    }
+  ]
+
   return (
     <div className="ticker-container">
       <div className="ticker-content">
         <div className="ticker-track">
-          {/* First set of items */}
-          <div className="ticker-item">
-            <FaCalendarAlt className="ticker-icon" />
-            <span>{formatDate(currentTime)}</span>
-          </div>
-          
-          <div className="ticker-item">
-            <FaClock className="ticker-icon" />
-            <span>{formatTime(currentTime)}</span>
-          </div>
-          
-          <div className="ticker-item">
-            <FaMapMarkerAlt className="ticker-icon" />
-            <span>{getLocationString()}</span>
-          </div>
-
-          <div className="ticker-item">
-            <span className="ticker-message">
-              🎨 Welcome to Scratchy Nib - Where Every Stroke Tells a Story 
-            </span>
-          </div>
-
-          {/* Duplicate set for seamless scrolling */}
-          <div className="ticker-item">
-            <FaCalendarAlt className="ticker-icon" />
-            <span>{formatDate(currentTime)}</span>
-          </div>
-          
-          <div className="ticker-item">
-            <FaClock className="ticker-icon" />
-            <span>{formatTime(currentTime)}</span>
-          </div>
-          
-          <div className="ticker-item">
-            <FaMapMarkerAlt className="ticker-icon" />
-            <span>{getLocationString()}</span>
-          </div>
-
-          <div className="ticker-item">
-            <span className="ticker-message">
-              🎨 Welcome to Scratchy Nib - Where Every Stroke Tells a Story 
-            </span>
-          </div>
+          {/* Repeat items 3 times for seamless scrolling */}
+          {Array(3).fill(null).map((_, repeatIndex) => (
+            tickerItems.map((item, itemIndex) => (
+              <div key={`${repeatIndex}-${itemIndex}`} className="ticker-item">
+                {item.icon}
+                <span className={item.className}>{item.text}</span>
+              </div>
+            ))
+          ))}
         </div>
       </div>
     </div>

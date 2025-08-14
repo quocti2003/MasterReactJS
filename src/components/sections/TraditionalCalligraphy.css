@@ -20,6 +20,30 @@
   pointer-events: none;
 }
 
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  color: #4a5568;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 /* Heritage Intro Section */
 .heritage-intro {
   background: rgba(255, 255, 255, 0.9);
@@ -122,9 +146,9 @@
 }
 
 .style-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(102, 126, 234, 0.15);
-  border-color: rgba(102, 126, 234, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(200, 200, 200, 0.3);
 }
 
 .card-image {
@@ -151,13 +175,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, 
+    rgba(102, 126, 234, 0.7) 0%, 
+    rgba(118, 75, 162, 0.6) 50%,
+    rgba(240, 147, 251, 0.5) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(2px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(3px);
 }
 
 .style-card:hover .image-overlay {
@@ -172,7 +199,12 @@
 .style-icon {
   font-size: 2.5rem;
   color: white;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.style-card:hover .style-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 
@@ -200,19 +232,20 @@
 
 .characteristic-tag {
   padding: 6px 15px;
-  background: rgba(102, 126, 234, 0.1);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  background: rgba(245, 245, 245, 0.8);
+  border: 1px solid rgba(220, 220, 220, 0.5);
   border-radius: 25px;
   font-size: 0.8rem;
-  color: #667eea;
+  color: #666666;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .style-card:hover .characteristic-tag {
-  background: rgba(102, 126, 234, 0.15);
-  border-color: rgba(102, 126, 234, 0.3);
-  transform: translateY(-2px);
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  transform: translateY(-1px);
 }
 
 .legacy-section {

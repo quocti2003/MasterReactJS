@@ -2,14 +2,16 @@ import React from 'react'
 import { FaScroll, FaFeatherAlt, FaBook, FaPalette, FaGlobeAsia, FaDharmachakra, FaHistory, FaUsers, FaHeart } from 'react-icons/fa'
 import './TraditionalCalligraphy.css'
 
+// Đây là component chính để hiển thị các phong cách thư pháp truyền thống
 const TraditionalCalligraphy = () => {
+  // Mảng `styles` chứa thông tin về các loại thư pháp
   const styles = [
     {
-      name: 'Brush Calligraphy',
-      description: 'The art of writing with brush and ink, emphasizing fluid strokes and expressive character forms.',
-      icon: <FaScroll />,
-      characteristics: ['Brush technique', 'Ink flow', 'Character expression'],
-      image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=250'
+      name: 'Brush Calligraphy', // Tên phong cách
+      description: 'The art of writing with brush and ink, emphasizing fluid strokes and expressive character forms.', // Mô tả
+      icon: <FaScroll />, // Icon đại diện (dùng thư viện react-icons)
+      characteristics: ['Brush technique', 'Ink flow', 'Character expression'], // Các đặc điểm nổi bật
+      image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=250' // Ảnh minh họa
     },
     {
       name: 'Pen Calligraphy',
@@ -28,8 +30,10 @@ const TraditionalCalligraphy = () => {
   ]
 
   return (
+    // Phần bao bọc chính của component
     <div className="traditional-section">
       <div className="container">
+        {/* Phần tiêu đề và mô tả ngắn */}
         <div className="section-header">
           <h2 className="section-title">Traditional Calligraphy</h2>
           <p className="section-subtitle">
@@ -37,22 +41,26 @@ const TraditionalCalligraphy = () => {
           </p>
         </div>
 
-
+        {/* Lưới hiển thị các phong cách thư pháp */}
         <div className="styles-grid">
+          {/* Dùng `map` để render từng phong cách trong mảng `styles` */}
           {styles.map((style, index) => (
             <div
-              key={index}
-              className="style-card"
+              key={index} // Key để React tối ưu việc render
+              className="style-card" // Class CSS cho thẻ card
             >
+              {/* Phần hình ảnh của card */}
               <div className="card-image">
                 <img src={style.image} alt={style.name} />
                 <div className="image-overlay">
                   <div className="style-icon">{style.icon}</div>
                 </div>
               </div>
+              {/* Phần nội dung của card */}
               <div className="card-content">
                 <h3 className="style-name">{style.name}</h3>
                 <p className="style-description">{style.description}</p>
+                {/* Các đặc điểm (hiển thị dưới dạng tag) */}
                 <div className="characteristics">
                   {style.characteristics.map((char, i) => (
                     <span key={i} className="characteristic-tag">{char}</span>
@@ -68,4 +76,4 @@ const TraditionalCalligraphy = () => {
   )
 }
 
-export default TraditionalCalligraphy
+export default TraditionalCalligraphy // Xuất component để sử dụng ở file khác

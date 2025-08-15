@@ -3,6 +3,7 @@ import { FaStar, FaUser, FaEnvelope, FaComment, FaClock } from 'react-icons/fa'
 import './Feedback.css'
 
 const Feedback = () => {
+  // State quản lý dữ liệu form
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,11 +11,16 @@ const Feedback = () => {
     message: ''
   })
 
+  // State quản lý trạng thái đã submit
   const [submitted, setSubmitted] = useState(false)
+  // State quản lý sao đang hover
   const [hoveredStar, setHoveredStar] = useState(0)
+  // State lưu trữ tất cả feedback
   const [allFeedbacks, setAllFeedbacks] = useState([])
+  // State hiển thị tất cả feedback hay không
   const [showAllFeedbacks, setShowAllFeedbacks] = useState(false)
 
+  // Xử lý thay đổi input form
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -23,6 +29,7 @@ const Feedback = () => {
     }))
   }
 
+  // Xử lý click chọn sao đánh giá
   const handleRatingClick = (rating) => {
     setFormData(prev => ({
       ...prev,
@@ -30,31 +37,33 @@ const Feedback = () => {
     }))
   }
 
-  // Load feedbacks from localStorage on component mount
+  // Load feedback từ localStorage khi component mount
   useEffect(() => {
     loadFeedbacks()
   }, [])
 
+  // Hàm load feedback từ localStorage
   const loadFeedbacks = () => {
     const feedbacks = JSON.parse(localStorage.getItem('feedbacks') || '[]')
-    // Sort by newest first
+    // Sắp xếp theo thời gian mới nhất
     feedbacks.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
     setAllFeedbacks(feedbacks)
   }
 
+  // Xử lý submit form
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Store feedback in localStorage (simulating database)
+    // Lưu feedback vào localStorage (giả lập database)
     const feedbacks = JSON.parse(localStorage.getItem('feedbacks') || '[]')
     const newFeedback = {
       ...formData,
       timestamp: new Date().toISOString(),
-      id: Date.now() // Simple ID generation
+      id: Date.now() // Tạo ID đơn giản
     }
     feedbacks.push(newFeedback)
     localStorage.setItem('feedbacks', JSON.stringify(feedbacks))
     
-    // Reload feedbacks to show the new one
+    // Load lại feedback để hiển thị feedback mới
     loadFeedbacks()
     
     setSubmitted(true)
@@ -69,6 +78,7 @@ const Feedback = () => {
     }, 3000)
   }
 
+  // Định dạng ngày tháng
   const formatDate = (timestamp) => {
     const date = new Date(timestamp)
     return date.toLocaleDateString('en-US', {
@@ -84,6 +94,7 @@ const Feedback = () => {
     <div className="feedback-section">
       <div className="container">
         <div className="feedback-content">
+          {/* Header section */}
           <div className="section-header">
             <h2 className="section-title">Share Your Feedback</h2>
             <p className="section-subtitle">
@@ -91,6 +102,7 @@ const Feedback = () => {
             </p>
           </div>
 
+          {/* Hiển thị thông báo sau khi submit */}
           {submitted ? (
             <div className="success-message">
               <div className="success-icon">✓</div>
@@ -98,10 +110,12 @@ const Feedback = () => {
               <p>Your feedback has been successfully submitted.</p>
             </div>
           ) : (
+            /* Form nhập feedback */
             <form
               className="feedback-form"
               onSubmit={handleSubmit}
             >
+              {/* Nhập tên và email */}
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">
@@ -136,6 +150,7 @@ const Feedback = () => {
                 </div>
               </div>
 
+              {/* Đánh giá sao */}
               <div className="form-group">
                 <label className="form-label">
                   <FaStar /> Rate Your Experience
@@ -161,6 +176,7 @@ const Feedback = () => {
                 </div>
               </div>
 
+              {/* Nhập nội dung feedback */}
               <div className="form-group">
                 <label htmlFor="message" className="form-label">
                   <FaComment /> Your Feedback
@@ -177,6 +193,7 @@ const Feedback = () => {
                 />
               </div>
 
+              {/* Nút submit */}
               <button
                 type="submit"
                 className="btn btn-primary submit-btn"
@@ -186,7 +203,7 @@ const Feedback = () => {
             </form>
           )}
 
-          {/* User Submitted Feedbacks */}
+          {/* Hiển thị feedback từ người dùng */}
           {allFeedbacks.length > 0 && (
             <div className="user-feedbacks">
               <div className="feedbacks-header">
@@ -199,6 +216,7 @@ const Feedback = () => {
                 </button>
               </div>
               
+              {/* Lưới hiển thị feedback */}
               <div className="user-feedbacks-grid">
                 {(showAllFeedbacks ? allFeedbacks : allFeedbacks.slice(0, 3)).map((feedback) => (
                   <div key={feedback.id} className="user-feedback-card">
@@ -229,6 +247,7 @@ const Feedback = () => {
             </div>
           )}
 
+          {/* Testimonials mẫu */}
           <div className="testimonials">
             <h3 className="testimonials-title">Featured Testimonials</h3>
             <div className="testimonial-cards">

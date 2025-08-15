@@ -1,0 +1,79 @@
+scratchy-nib/
+├── public/
+│   ├── favicon.ico
+│   └── images/
+│       ├── logo.png
+│       ├── arabic/
+│       ├── chinese/
+│       ├── greek/
+│       ├── indic/
+│       ├── japanese/
+│       ├── western/
+│       └── modern/
+├── src/
+│   ├── assets/
+│   │   ├── fonts/
+│   │   ├── images/
+│   │   └── data/
+│   │       └── calligraphy-data.json
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Header.css
+│   │   │   ├── Navigation.jsx
+│   │   │   ├── Navigation.css
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Footer.css
+│   │   │   ├── ScrollingTicker.jsx
+│   │   │   ├── ScrollingTicker.css
+│   │   │   ├── VisitorCounter.jsx
+│   │   │   └── VisitorCounter.css
+│   │   ├── sections/
+│   │   │   ├── HeroSection.jsx
+│   │   │   ├── HeroSection.css
+│   │   │   ├── TraditionalCalligraphy.jsx
+│   │   │   ├── TraditionalCalligraphy.css
+│   │   │   ├── ContemporaryCalligraphy.jsx
+│   │   │   ├── ContemporaryCalligraphy.css
+│   │   │   ├── ModernCalligraphy.jsx
+│   │   │   ├── ModernCalligraphy.css
+│   │   │   ├── HandLettering.jsx
+│   │   │   ├── HandLettering.css
+│   │   │   ├── Gallery.jsx
+│   │   │   ├── Gallery.css
+│   │   │   ├── AboutUs.jsx
+│   │   │   ├── AboutUs.css
+│   │   │   ├── ContactUs.jsx
+│   │   │   ├── ContactUs.css
+│   │   │   ├── Feedback.jsx
+│   │   │   └── Feedback.css
+│   │   └── ui/
+│   │       ├── FilterButtons.jsx
+│   │       ├── FilterButtons.css
+│   │       ├── GalleryCard.jsx
+│   │       ├── GalleryCard.css
+│   │       ├── Modal.jsx
+│   │       ├── Modal.css
+│   │       ├── Loader.jsx
+│   │       └── Loader.css
+│   ├── hooks/
+│   │   ├── useGeolocation.js
+│   │   ├── useVisitorCount.js
+│   │   └── useScrollAnimation.js
+│   ├── styles/
+│   │   ├── global.css
+│   │   ├── animations.css
+│   │   ├── responsive.css
+│   │   └── variables.css
+│   ├── utils/
+│   │   ├── constants.js
+│   │   └── helpers.js
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── .gitignore
+├── .eslintrc.json
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md

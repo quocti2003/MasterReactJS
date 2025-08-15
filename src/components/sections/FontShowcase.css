@@ -1,0 +1,670 @@
+.font-showcase-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, 
+    #f8f9ff 0%, 
+    #fff5f0 50%, 
+    #f0f8ff 100%);
+  min-height: 100vh;
+}
+
+.font-showcase-section .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.font-showcase-section .section-title {
+  font-size: 3.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+  font-family: var(--font-calligraphic);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.font-showcase-section .section-subtitle {
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.fonts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.font-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.font-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.font-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.font-name {
+  font-size: 1.5rem;
+  color: var(--color-primary-dark);
+  margin: 0;
+  font-weight: 700;
+}
+
+.font-category {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.font-sample {
+  font-size: 2.2rem;
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #fafbff, #fff8f5);
+  border-radius: 15px;
+  margin-bottom: 25px;
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-accent-light);
+}
+
+/* Font Samples */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.font-crimson {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+}
+
+.font-great-vibes {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+}
+
+.font-details {
+  margin-bottom: 25px;
+}
+
+.font-description {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.font-usage {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.font-usage strong {
+  color: var(--color-primary-dark);
+}
+
+.font-alphabet {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.alphabet-sample {
+  text-align: center;
+}
+
+.alphabet-sample .uppercase {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.alphabet-sample .lowercase {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.alphabet-sample .numbers {
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Enhanced font detail styling */
+.font-characteristics {
+  margin: 1.5rem 0;
+}
+
+.font-characteristics h5,
+.letterforms-info h5,
+.font-alphabet h5 {
+  font-size: 1rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.font-characteristics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.font-characteristics li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.font-characteristics li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.letterforms-info {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.letterforms-info p {
+  margin: 0;
+  color: var(--color-text);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.character-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.character-row:last-child {
+  margin-bottom: 0;
+}
+
+.character-row .label {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  min-width: 90px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.character-row .uppercase,
+.character-row .lowercase,
+.character-row .numbers,
+.character-row .symbols {
+  flex: 1;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  min-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+/* Special handling for script fonts */
+.font-great-vibes .uppercase,
+.font-great-vibes .lowercase {
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+.font-brush-script .uppercase,
+.font-brush-script .lowercase {
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+}
+
+.font-dancing .uppercase,
+.font-dancing .lowercase {
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fonts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .font-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .character-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .character-row .label {
+    min-width: auto;
+    font-size: 0.8rem;
+  }
+  
+  .character-row .uppercase,
+  .character-row .lowercase,
+  .character-row .numbers,
+  .character-row .symbols {
+    min-width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  
+  .font-great-vibes .uppercase,
+  .font-great-vibes .lowercase {
+    font-size: 0.75rem;
+  }
+  
+  .font-brush-script .uppercase,
+  .font-brush-script .lowercase {
+    font-size: 0.8rem;
+  }
+}
+
+/* Additional font class */
+.font-brush-script {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.typography-philosophy {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border: 2px solid var(--color-accent-light);
+}
+
+.typography-philosophy h3 {
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 30px;
+  font-family: var(--font-calligraphic);
+}
+
+.philosophy-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 25px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typography-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.principle {
+  padding: 25px;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary-light));
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.principle:hover {
+  transform: translateY(-5px);
+}
+
+.principle h4 {
+  font-size: 1.3rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.principle p {
+  font-size: 0.95rem !important;
+  color: var(--color-text-secondary);
+  margin-bottom: 0 !important;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+/* Mobile: 320px-599px */
+@media (max-width: 599px) {
+  .font-showcase-section {
+    padding: clamp(30px, 8vw, 50px) 0;
+    min-height: 90vh;
+  }
+  
+  .font-showcase-section .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    margin-bottom: clamp(15px, 3vw, 20px);
+  }
+
+  .font-showcase-section .section-subtitle {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    max-width: 90%;
+  }
+  
+  .fonts-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(15px, 4vw, 25px);
+    padding: 0 clamp(15px, 4vw, 20px);
+    margin-bottom: clamp(50px, 8vw, 80px);
+  }
+  
+  .font-card {
+    padding: clamp(15px, 4vw, 25px) clamp(12px, 3vw, 20px);
+    border-radius: clamp(10px, 2vw, 15px);
+  }
+  
+  .font-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(8px, 2vw, 10px);
+    margin-bottom: clamp(15px, 3vw, 20px);
+  }
+
+  .font-name {
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
+  }
+
+  .font-category {
+    padding: clamp(3px, 1vw, 5px) clamp(8px, 2vw, 12px);
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    border-radius: clamp(10px, 2vw, 15px);
+  }
+  
+  .font-sample {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+    padding: clamp(15px, 4vw, 20px);
+    margin-bottom: clamp(20px, 4vw, 25px);
+    border-radius: clamp(10px, 2vw, 15px);
+  }
+
+  .font-description {
+    font-size: clamp(0.85rem, 3vw, 0.9rem);
+    margin-bottom: clamp(12px, 2vw, 15px);
+  }
+
+  .font-usage {
+    font-size: clamp(0.8rem, 2.5vw, 0.85rem);
+  }
+
+  .font-alphabet {
+    padding: clamp(15px, 3vw, 20px);
+    border-radius: clamp(8px, 1.5vw, 12px);
+  }
+  
+  .alphabet-sample .uppercase,
+  .alphabet-sample .lowercase,
+  .alphabet-sample .numbers {
+    font-size: clamp(0.65rem, 2vw, 0.75rem);
+    margin-bottom: clamp(6px, 1vw, 8px);
+  }
+  
+  .typography-philosophy {
+    padding: clamp(20px, 5vw, 30px) clamp(15px, 4vw, 20px);
+    margin: 0 clamp(15px, 4vw, 20px);
+    border-radius: clamp(15px, 3vw, 25px);
+  }
+  
+  .typography-philosophy h3 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-bottom: clamp(20px, 4vw, 30px);
+  }
+
+  .philosophy-content p {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    margin-bottom: clamp(15px, 3vw, 25px);
+    line-height: 1.6;
+  }
+  
+  .typography-principles {
+    grid-template-columns: 1fr;
+    gap: clamp(15px, 4vw, 20px);
+    margin-top: clamp(25px, 5vw, 40px);
+  }
+
+  .principle {
+    padding: clamp(15px, 4vw, 20px);
+    border-radius: clamp(10px, 2vw, 15px);
+  }
+
+  .principle h4 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: clamp(8px, 1.5vw, 10px);
+  }
+
+  .principle p {
+    font-size: clamp(0.8rem, 2.5vw, 0.85rem) !important;
+  }
+}
+
+/* Tablet: 600px-1023px */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .font-showcase-section {
+    padding: clamp(50px, 8vw, 70px) 0;
+  }
+  
+  .font-showcase-section .section-title {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+  }
+
+  .font-showcase-section .section-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+  }
+  
+  .fonts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: clamp(20px, 3vw, 25px);
+    padding: 0 clamp(20px, 4vw, 30px);
+  }
+  
+  .font-card {
+    padding: clamp(20px, 3vw, 25px);
+    border-radius: clamp(12px, 2vw, 18px);
+  }
+
+  .font-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(15px, 2vw, 20px);
+  }
+
+  .font-name {
+    font-size: clamp(1.3rem, 2.2vw, 1.5rem);
+  }
+  
+  .font-sample {
+    font-size: clamp(1.8rem, 3vw, 2rem);
+    padding: clamp(18px, 3vw, 22px);
+  }
+  
+  .typography-philosophy {
+    padding: clamp(35px, 5vw, 45px) clamp(25px, 4vw, 35px);
+    margin: 0 clamp(20px, 4vw, 30px);
+  }
+  
+  .typography-philosophy h3 {
+    font-size: clamp(2rem, 3vw, 2.3rem);
+  }
+
+  .philosophy-content p {
+    font-size: clamp(1rem, 1.8vw, 1.05rem);
+  }
+  
+  .typography-principles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 3vw, 25px);
+  }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  .font-showcase-section {
+    padding: clamp(70px, 8vw, 100px) 0;
+  }
+  
+  .font-showcase-section .section-title {
+    font-size: clamp(3rem, 4vw, 3.5rem);
+  }
+
+  .font-showcase-section .section-subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.3rem);
+  }
+  
+  .fonts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: clamp(25px, 3vw, 30px);
+    padding: 0 clamp(30px, 4vw, 50px);
+  }
+  
+  .font-card {
+    padding: clamp(25px, 3vw, 30px);
+  }
+
+  .font-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  }
+
+  .font-header {
+    margin-bottom: clamp(18px, 2vw, 20px);
+  }
+
+  .font-name {
+    font-size: clamp(1.4rem, 2vw, 1.5rem);
+  }
+  
+  .font-sample {
+    font-size: clamp(2rem, 3vw, 2.2rem);
+    padding: clamp(22px, 3vw, 25px);
+  }
+
+  .font-description {
+    font-size: clamp(0.95rem, 1.3vw, 1rem);
+  }
+
+  .font-usage {
+    font-size: clamp(0.9rem, 1.2vw, 0.95rem);
+  }
+
+  .font-alphabet {
+    padding: clamp(18px, 2vw, 20px);
+  }
+
+  .alphabet-sample .uppercase,
+  .alphabet-sample .lowercase,
+  .alphabet-sample .numbers {
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  }
+  
+  .typography-philosophy {
+    padding: clamp(40px, 5vw, 50px);
+    margin: 0 clamp(30px, 4vw, 50px);
+  }
+
+  .typography-philosophy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+  }
+  
+  .typography-philosophy h3 {
+    font-size: clamp(2.2rem, 3vw, 2.5rem);
+  }
+
+  .philosophy-content p {
+    font-size: clamp(1.05rem, 1.5vw, 1.1rem);
+  }
+  
+  .typography-principles {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(25px, 3vw, 30px);
+  }
+
+  .principle {
+    padding: clamp(20px, 3vw, 25px);
+  }
+
+  .principle:hover {
+    transform: translateY(-3px);
+  }
+
+  .principle h4 {
+    font-size: clamp(1.2rem, 2vw, 1.3rem);
+  }
+
+  .principle p {
+    font-size: clamp(0.9rem, 1.2vw, 0.95rem) !important;
+  }
+}
+
+/* Extra Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .fonts-grid {
+    max-width: 1400px;
+    margin: 0 auto clamp(60px, 8vw, 80px);
+  }
+  
+  .typography-philosophy {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,156 @@
+.ticker-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 0;
+  z-index: 90;
+  overflow: hidden;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ticker-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 60px;
+  animation: scroll 30s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+  will-change: transform;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+}
+
+.ticker-icon {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ticker-message {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Removed hover pause effect - ticker continues running */
+/* .ticker-container:hover .ticker-track {
+  animation-play-state: paused;
+} */
+
+/* Gradient overlay for smooth edges */
+.ticker-container::before,
+.ticker-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ticker-container::before {
+  left: 0;
+  background: linear-gradient(to right, 
+    rgba(102, 126, 234, 1) 0%, 
+    rgba(102, 126, 234, 0) 100%);
+}
+
+.ticker-container::after {
+  right: 0;
+  background: linear-gradient(to left, 
+    rgba(118, 75, 162, 1) 0%, 
+    rgba(118, 75, 162, 0) 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .ticker-track {
+    animation-duration: 25s;
+  }
+}
+
+@media (max-width: 768px) {
+  .ticker-container {
+    padding: 10px 0;
+  }
+
+  .ticker-item {
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  .ticker-icon {
+    font-size: 1rem;
+  }
+
+  .ticker-track {
+    gap: 40px;
+    animation-duration: 20s;
+  }
+
+  .ticker-container::before,
+  .ticker-container::after {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticker-container {
+    padding: 8px 0;
+  }
+
+  .ticker-item {
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+
+  .ticker-icon {
+    font-size: 0.9rem;
+  }
+
+  .ticker-track {
+    gap: 30px;
+    animation-duration: 15s;
+  }
+
+  .ticker-message {
+    font-size: 0.75rem;
+  }
+
+  .ticker-container::before,
+  .ticker-container::after {
+    width: 30px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .ticker-container {
+    background: linear-gradient(135deg, #4c5fd7 0%, #5a3f8f 100%);
+  }
+}

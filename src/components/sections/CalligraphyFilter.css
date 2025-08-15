@@ -48,6 +48,9 @@
   font-weight: 700;
 }
 
+
+
+
 .modal-close {
   background: #e74c3c;
   border: none;
@@ -62,6 +65,16 @@
   font-size: 1.2rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.modal-close::before {
+  content: "×";
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 30px;
 }
 
 .modal-close:hover {

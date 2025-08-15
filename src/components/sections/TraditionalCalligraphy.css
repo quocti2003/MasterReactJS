@@ -221,6 +221,19 @@
   color: white;
 }
 
+/* .style-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+ .style-card:hover .style-description {
+  color: white;
+}  */
+  
+/* code được sửa */
 .style-description {
   color: #4a5568;
   line-height: 1.6;
@@ -230,8 +243,11 @@
 }
 
 .style-card:hover .style-description {
-  color: white;
+  color: #fff !important; /* ép màu trắng */
 }
+
+
+
 
 .characteristics {
   display: flex;

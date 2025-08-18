@@ -1,6 +1,18 @@
 import React, { useState } from 'react'
 import { FaTimes, FaImages, FaStar } from 'react-icons/fa'
 import './CalligraphyFilter.css'
+// --- BẮT ĐẦU: Hàm chuyển đổi ---
+const convertGoogleDriveLink = (url) => {
+  const regex = /drive\.google\.com\/file\/d\/([^/]+)/;
+  const match = url.match(regex);
+
+  if (match && match[1]) {
+    const fileId = match[1];
+    return `https://lh3.googleusercontent.com/d/${fileId}`;
+  }
+  return url;
+};
+// --- KẾT THÚC: Hàm chuyển đổi ---
 
 const CalligraphyFilter = () => {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -18,7 +30,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Horizontal layout', 'Clear letterforms', 'Balanced proportions', 'Classical elegance'],
       example: 'نسخ',
       color: '#e74c3c',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400'
+      image: 'https://www.arabnews.com/sites/default/files/userimages/2050466/shutterstock_1064665592.jpg'
     },
     {
       id: 'thuluth',
@@ -29,7 +41,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Curved strokes', 'Decorative style', 'Monumental use', 'Complex beauty'],
       example: 'ثلث',
       color: '#e74c3c',
-      image: 'https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=600&h=400'
+      image: 'https://cdn.britannica.com/12/134412-050-39C3BF6A/tile-panel-Ottoman-underglaze-Iznik-Tur-Los.jpg?w=300'
     },
     {
       id: 'kufic',
@@ -40,7 +52,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Angular design', 'Geometric patterns', 'Ancient origins', 'Bold structure'],
       example: 'كوفي',
       color: '#e74c3c',
-      image: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=600&h=400'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Unknown%2C_North_Africa_or_Southern_Spain%2C_9th_or_10th_Century_-_Blue_Qur%27an_Page_-_Google_Art_Project_%28cropped%29.jpg/500px-Unknown%2C_North_Africa_or_Southern_Spain%2C_9th_or_10th_Century_-_Blue_Qur%27an_Page_-_Google_Art_Project_%28cropped%29.jpg'
     },
     {
       id: 'diwani',
@@ -51,7 +63,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Flowing curves', 'Ottoman style', 'Ornamental', 'Court documents'],
       example: 'ديواني',
       color: '#e74c3c',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400'
+      image: 'https://mymodernmet.com/wp/wp-content/uploads/2022/04/ottoman-leaf-calligraphy-1.jpeg'
     },
     {
       id: 'ruqah',
@@ -62,7 +74,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Simple forms', 'Easy to write', 'Modern usage', 'Practical design'],
       example: 'رقعة',
       color: '#e74c3c',
-      image: 'https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=600&h=400'
+      image: 'https://www.calligraphyqalam.com/wordpress/wp-content/uploads/2021/07/Riqa-practice-1536x1152.jpg'
     },
     {
       id: 'devanagari',
@@ -73,7 +85,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Horizontal line on top', 'Complex conjuncts', 'Sacred texts', 'Geometric forms'],
       example: 'देवनागरी',
       color: '#f39c12',
-      image: 'https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=600&h=400'
+      image: 'https://www.typotheque.com/_next/image?url=https%3A%2F%2Fassets.typotheque.com%2Fassets%2FUploads%2Farticle238%2Ffigure103.jpg&w=1920&q=75'
     },
     {
       id: 'bengali',
@@ -84,7 +96,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Rounded forms', 'Flowing curves', 'Cultural heritage', 'Literary tradition'],
       example: 'বাংলা',
       color: '#f39c12',
-      image: 'https://images.unsplash.com/photo-1544986581-efac024faf62?w=600&h=400'
+      image: 'https://salrc.uchicago.edu/resources/fonts/available/bengali/img/unibanglaset.gif'
     },
     {
       id: 'tamil',
@@ -95,7 +107,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Circular forms', 'Ancient origins', 'No horizontal line', 'Curved beauty'],
       example: 'தமிழ்',
       color: '#f39c12',
-      image: 'https://images.unsplash.com/photo-1533122250115-6bb28e9a48c3?w=600&h=400'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Brahmi_pillar_inscription_in_Sarnath.jpg/500px-Brahmi_pillar_inscription_in_Sarnath.jpg'
     },
     {
       id: 'telugu',
@@ -106,7 +118,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Rounded letters', 'Elegant curves', 'Vowel marks', 'Classical beauty'],
       example: 'తెలుగు',
       color: '#f39c12',
-      image: 'https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=600&h=400'
+      image: 'https://www.jetpunk.com/img/user-img/8e/8e9a8d95cf-450.webp'
     },
     {
       id: 'kannada',
@@ -117,7 +129,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Rounded design', 'Unique forms', 'Ancient heritage', 'Smooth curves'],
       example: 'ಕನ್ನಡ',
       color: '#f39c12',
-      image: 'https://images.unsplash.com/photo-1544986581-efac024faf62?w=600&h=400'
+      image: 'https://indiafacts.org/wp-content/uploads/2018/09/Spirals-and-Curves-in-the-Paleographical-Evolution-of-Kannada-Language-Alphabets-14.jpg'
     },
     {
       id: 'ancient-greek',
@@ -128,7 +140,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Capital letters only', 'Stone inscriptions', 'Classical texts', 'Geometric beauty'],
       example: 'ΕΛΛΗΝΙΚΑ',
       color: '#3498db',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'https://www.thoughtco.com/thmb/z_9vZYXoNqIvDChibd5SCLTgZSo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ancient-greek-inscription-in-celcus-library-185406698-20b0d4dd6113472c8f70aa43800a8817.jpg'
     },
     {
       id: 'byzantine',
@@ -139,7 +151,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Religious texts', 'Illuminated manuscripts', 'Ornate style', 'Christian heritage'],
       example: 'Βυζαντινά',
       color: '#3498db',
-      image: 'https://images.unsplash.com/photo-1567613951019-9c5a35f8f9e3?w=600&h=400'
+      image: 'https://i0.wp.com/christianpublishinghouse.co/wp-content/uploads/2019/11/1200px-minuscule_2_ga_matt_1-byzantine-text-e1573632387997.jpg?fit=1200%2C699&ssl=1'
     },
     {
       id: 'modern-greek',
@@ -150,7 +162,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Upper and lowercase', 'Modern forms', 'Simplified writing', 'Contemporary use'],
       example: 'Ελληνικά',
       color: '#3498db',
-      image: 'https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&h=400'
+      image: 'https://miro.medium.com/v2/resize:fit:640/format:webp/1*apfk-s1qyqFq15vuVjT5tQ.png'
     },
     {
       id: 'uncial-greek',
@@ -161,7 +173,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Rounded forms', 'Early manuscripts', 'Codex tradition', 'Transitional style'],
       example: 'ουγκιαλ',
       color: '#3498db',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'https://foundinantiquity.com/wp-content/uploads/2014/03/uncialsinaiticcodex.jpg'
     },
     {
       id: 'kaishu',
@@ -172,7 +184,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Clear structure', 'Standard forms', 'Regular strokes', 'Printed texts'],
       example: '楷書',
       color: '#e67e22',
-      image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&h=400'
+      image: 'https://i0.wp.com/asia-archive.si.edu/wp-content/uploads/2020/02/F1998_83_detail570.jpg?w=570&ssl=1'
     },
     {
       id: 'xingshu',
@@ -183,7 +195,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Semi-cursive', 'Flowing strokes', 'Connected forms', 'Practical writing'],
       example: '行書',
       color: '#e67e22',
-      image: 'https://images.unsplash.com/photo-1578228142513-9a1e0bb9f4e9?w=600&h=400'
+      image: 'https://www.chinaeducationaltours.com/media/image/2020-09/15997323316872.jpg'
     },
     {
       id: 'caoshu',
@@ -194,7 +206,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Highly cursive', 'Abstract forms', 'Artistic expression', 'Swift writing'],
       example: '草書',
       color: '#e67e22',
-      image: 'https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&h=400'
+      image: 'https://rayallychina.wordpress.com/wp-content/uploads/2015/03/mar3_calligraphy.jpg'
     },
     {
       id: 'lishu',
@@ -205,7 +217,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Broad strokes', 'Flat forms', 'Official documents', 'Han Dynasty'],
       example: '隸書',
       color: '#e67e22',
-      image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&h=400'
+      image: 'https://i0.wp.com/asia-archive.si.edu/wp-content/uploads/2020/02/calligraphy_banner1.jpg?resize=2048%2C441&ssl=1'
     },
     {
       id: 'zhuanshu',
@@ -216,7 +228,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Ancient forms', 'Seal carving', 'Decorative use', 'Historical importance'],
       example: '篆書',
       color: '#e67e22',
-      image: 'https://images.unsplash.com/photo-1578228142513-9a1e0bb9f4e9?w=600&h=400'
+      image: 'https://i0.wp.com/asia-archive.si.edu/wp-content/uploads/2020/02/FS-7435_46-crop-1.jpg?resize=480%2C533&ssl=1'
     },
     {
       id: 'hiragana',
@@ -227,7 +239,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Curved forms', 'Syllabic writing', 'Native words', 'Flowing style'],
       example: 'ひらがな',
       color: '#9b59b6',
-      image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&h=400'
+      image: 'https://media.istockphoto.com/id/1222552230/vi/vec-to/nh%E1%BA%ADt-b%E1%BA%A3n-b%C3%A0n-ch%E1%BA%A3i-hiragana.jpg?s=2048x2048&w=is&k=20&c=3cHfktnIfp81IFtY-SXR04QIaX2-TvDbUygEFga93J4='
     },
     {
       id: 'katakana',
@@ -238,7 +250,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Angular forms', 'Foreign words', 'Simplified strokes', 'Modern usage'],
       example: 'カタカナ',
       color: '#9b59b6',
-      image: 'https://images.unsplash.com/photo-1550439062-609e1531270e?w=600&h=400'
+      image: 'https://soranews24.com/wp-content/uploads/sites/3/2014/10/kf-6.png'
     },
     {
       id: 'kanji',
@@ -249,7 +261,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Chinese origin', 'Complex meanings', 'Multiple readings', 'Ideographic'],
       example: '漢字',
       color: '#9b59b6',
-      image: 'https://images.unsplash.com/photo-1578042040833-b95dfd6d5c67?w=600&h=400'
+      image: 'https://i0.wp.com/jbj.luf.temporary.site/wp-content/uploads/2024/02/historia_kanji_01.jpg?ssl=1'
     },
     {
       id: 'shodo',
@@ -271,7 +283,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Syllabic blocks', 'Scientific design', 'Phonetic system', 'Modern innovation'],
       example: '한글',
       color: '#1abc9c',
-      image: 'https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=600&h=400'
+      image: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*hmKU0MqWRQ8ip0lF4Q9pxQ.jpeg'
     },
     {
       id: 'hanja',
@@ -282,7 +294,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Chinese origin', 'Traditional use', 'Formal documents', 'Classical literature'],
       example: '漢字',
       color: '#1abc9c',
-      image: 'https://images.unsplash.com/photo-1578894420191-9aaa0cf1e2b5?w=600&h=400'
+      image: convertGoogleDriveLink('https://cdn.shopify.com/s/files/1/0469/3927/5428/t/21/assets/bildschirmfoto20221129um091404--edited-1669712438966.jpg?v=1669712442')
     },
     {
       id: 'modern-korean',
@@ -293,7 +305,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Mixed script', 'Contemporary use', 'Digital adaptation', 'Cultural evolution'],
       example: '현대한국어',
       color: '#1abc9c',
-      image: 'https://images.unsplash.com/photo-1564415315949-7a0c4c73aab4?w=600&h=400'
+      image: 'https://images.squarespace-cdn.com/content/v1/6364bb76e5662e1fb6b69519/d15a84f4-beff-4345-b0dd-8e485f6d16ae/S175_2.jpg?format=2500w'
     },
     {
       id: 'square-hebrew',
@@ -304,7 +316,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Square letters', 'Right-to-left', 'Religious texts', 'Classic form'],
       example: 'עברית',
       color: '#2ecc71',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'https://qph.cf2.quoracdn.net/main-qimg-ff737b2be83506d4331d8a6bdf9bc71e'
     },
     {
       id: 'cursive-hebrew',
@@ -315,7 +327,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Cursive forms', 'Handwriting', 'Connected letters', 'Modern use'],
       example: 'כתב יד',
       color: '#2ecc71',
-      image: 'https://images.unsplash.com/photo-1567613951019-9c5a35f8f9e3?w=600&h=400'
+      image: 'https://www.typotheque.com/_next/image?url=https%3A%2F%2Fassets.typotheque.com%2Fassets%2FUploads%2Farticle%2Fcursive.jpg&w=1920&q=75'
     },
     {
       id: 'rashi-script',
@@ -326,7 +338,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Semi-cursive', 'Rabbinical texts', 'Commentary style', 'Medieval origin'],
       example: 'רש"י',
       color: '#2ecc71',
-      image: 'https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&h=400'
+      image: 'https://plantingrootsbearingfruits.com/wp-content/uploads/2019/05/psalf13-jr022.jpg'
     },
     {
       id: 'ashkenazi',
@@ -337,7 +349,7 @@ const CalligraphyFilter = () => {
       characteristics: ['European tradition', 'Ornate style', 'Religious manuscripts', 'Cultural heritage'],
       example: 'אשכנזי',
       color: '#2ecc71',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'https://shop.yiddishbookcenter.org/cdn/shop/products/ashkenaziherbalism.jpg?v=1740676165&width=1200'
     },
     {
       id: 'church-slavonic',
@@ -348,7 +360,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Religious texts', 'Ancient forms', 'Orthodox tradition', 'Liturgical use'],
       example: 'Словѣньскъ',
       color: '#34495e',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'http://www.pravoslavie.ru/sas/image/100425/42552.b.jpg'
     },
     {
       id: 'russian-cursive',
@@ -359,7 +371,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Cursive forms', 'Connected letters', 'Handwriting style', 'Modern use'],
       example: 'русский',
       color: '#34495e',
-      image: 'https://images.unsplash.com/photo-1567613951019-9c5a35f8f9e3?w=600&h=400'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Russian_Cyrillic_handwriting_Flerov_1916.png/784px-Russian_Cyrillic_handwriting_Flerov_1916.png?20110905061629'
     },
     {
       id: 'bulgarian',
@@ -370,7 +382,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Bulgarian forms', 'National variant', 'Modern usage', 'Cultural identity'],
       example: 'българо',
       color: '#34495e',
-      image: 'https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&h=400'
+      image: 'https://cdn-gc.type.today/storage/post_image/8/0/8046/image-OZiOFfr7e5G7IEmQEItk8FOrpzR4yJ8Tug.jpg'
     },
     {
       id: 'serbian',
@@ -381,7 +393,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Serbian letters', 'Dual script use', 'National identity', 'Modern forms'],
       example: 'српски',
       color: '#34495e',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Miroslav%27s_Gospel_001.jpg'
     },
     {
       id: 'traditional-thai',
@@ -392,7 +404,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Ornate forms', 'Classical style', 'Royal documents', 'Traditional texts'],
       example: 'ไทยโบราณ',
       color: '#e91e63',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'https://www.learnthaiwithmod.com/wp-content/uploads/2011/11/Thai-letters.jpg'
     },
     {
       id: 'modern-thai',
@@ -403,7 +415,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Simplified forms', 'Modern usage', 'Digital adaptation', 'Contemporary style'],
       example: 'ไทยสมัยใหม่',
       color: '#e91e63',
-      image: 'https://images.unsplash.com/photo-1567613951019-9c5a35f8f9e3?w=600&h=400'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Manoptica_dry-transfer_sheet.png'
     },
     {
       id: 'lanna',
@@ -414,7 +426,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Northern style', 'Regional variant', 'Historical use', 'Cultural heritage'],
       example: 'ᨠᩦᩱᨶᩕ',
       color: '#e91e63',
-      image: 'https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&h=400'
+      image: 'https://skyknowledge.com/lanna-poem.jpg'
     },
     {
       id: 'uchen',
@@ -425,7 +437,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Formal style', 'Clear forms', 'Printed texts', 'Official use'],
       example: 'དབུ་ཅན',
       color: '#9c27b0',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400'
+      image: 'https://sambhotaworks.com/wp-content/uploads/2024/05/20240509_161843-C-cropped.jpg'
     },
     {
       id: 'ume',
@@ -436,7 +448,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Cursive style', 'Handwriting', 'Flowing forms', 'Personal use'],
       example: 'དབུ་མེད',
       color: '#9c27b0',
-      image: 'https://images.unsplash.com/photo-1567613951019-9c5a35f8f9e3?w=600&h=400'
+      image: 'https://tibetanlanguage.school/wp-content/uploads/2022/12/tsutung.png'
     },
     {
       id: 'khyug',
@@ -447,7 +459,7 @@ const CalligraphyFilter = () => {
       characteristics: ['Running style', 'Quick writing', 'Connected forms', 'Practical use'],
       example: 'འཁྱུག',
       color: '#9c27b0',
-      image: 'https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&h=400'
+      image: 'https://tibetanlanguage.school/wp-content/uploads/2022/12/uchen-1.png'
     }
   ]
 

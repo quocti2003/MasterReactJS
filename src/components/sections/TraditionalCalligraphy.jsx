@@ -1,33 +1,22 @@
 import React from 'react'
-import { FaScroll, FaFeatherAlt, FaBook, FaPalette, FaGlobeAsia, FaDharmachakra, FaHistory, FaUsers, FaHeart } from 'react-icons/fa'
+import { FaScroll, FaFeatherAlt, FaBook } from 'react-icons/fa'
 import './TraditionalCalligraphy.css'
+import stylesData from '../../data/traditionalCalligraphy.json'
+
+// Icon mapping object
+const iconMap = {
+  'FaScroll': <FaScroll />,
+  'FaFeatherAlt': <FaFeatherAlt />,
+  'FaBook': <FaBook />
+}
 
 // Đây là component chính để hiển thị các phong cách thư pháp truyền thống
 const TraditionalCalligraphy = () => {
-  // Mảng `styles` chứa thông tin về các loại thư pháp
-  const styles = [
-    {
-      name: 'Brush Calligraphy', // Tên phong cách
-      description: 'The art of writing with brush and ink, emphasizing fluid strokes and expressive character forms.', // Mô tả
-      icon: <FaScroll />, // Icon đại diện (dùng thư viện react-icons)
-      characteristics: ['Brush technique', 'Ink flow', 'Character expression'], // Các đặc điểm nổi bật
-      image: '/public/brush-lettering.jpg' // Ảnh minh họa
-    },
-    {
-      name: 'Pen Calligraphy',
-      description: 'Elegant writing using traditional pens, focusing on consistent letterforms and classical beauty.',
-      icon: <FaFeatherAlt />,
-      characteristics: ['Pen control', 'Letter spacing', 'Classical forms'],
-      image: '/public/pen-calligraphy.jpeg'
-    },
-    {
-      name: 'Script Traditions',
-      description: 'Time-honored writing systems that preserve cultural heritage through beautiful lettering.',
-      icon: <FaBook />,
-      characteristics: ['Cultural heritage', 'Traditional methods', 'Historical scripts'],
-      image: '/public/script-tradition.jpg'
-    }
-  ]
+  // Map data từ JSON và thêm React icons
+  const styles = stylesData.map(style => ({
+    ...style,
+    icon: iconMap[style.icon]
+  }))
 
   return (
     // Phần bao bọc chính của component

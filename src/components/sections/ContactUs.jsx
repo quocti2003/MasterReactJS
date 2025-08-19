@@ -22,7 +22,7 @@ const ContactUs = () => {
       name: 'Huy',
       email: 'huygetamped748366@gmail.com',
       address: '23bis Hậu Giang, Phường Tân Sơn Nhất, TP. HCM',
-      phone: '0901471136',
+      phone: '0985367579',
       role: 'Developer, Software Architect'
     }
   ]

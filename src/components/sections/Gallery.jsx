@@ -54,7 +54,7 @@ const Gallery = () => {
       id: 7,
       title: 'Japanese Kanji',
       category: 'japanese',
-      image: '/calligraphy-images/japanese/japanese1.jpg',
+      image: 'https://drive.google.com/file/d/1RfOVFqk0Gq7lTSP_5c2r_Bv3BvNIRgPV/view?usp=sharing',
       description: 'Elegant Japanese calligraphy'
     },
     {

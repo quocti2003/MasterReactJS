@@ -4,27 +4,33 @@
 **Center Name**: ACE-HCMC-2-FPT
 
 ## 👥 Group Contributors
-- **Phan Minh Huy** – Student1634681
-- **Pham Quoc Tuan** – Student1637695
-- **Nguyen Van Hieu** – Student1634692
+
+- **Le Gia Quoc Ti (Edric)** – Student1637702
+- **Le Duc Anh Huy** – Student1637705
+- **Hoang Huynh Hieu** – Student1628475
 
 ## 📄 Documentation
+
 You can view the complete project report here:  
-[eProject Report – Scratchy Nib](https://github.com/quocti2003/MasterReactJS/docs)
+[eProject Report – Scratchy Nib](UPDATE LATER)
 
 ## 🌐 Live Website
+
 Click below to explore the live version of our project:  
-[Scratchy Nib Website](https://quocti2003.github.io/MasterReactJS/)
+[Scratchy Nib Website](https://scratchy-nib-one.vercel.app/)
 
 ## 🎥 Demonstration Video
-[Scratchy Nib Introduction Video](https://www.youtube.com/watch?v=demo)
+
+[Scratchy Nib Introduction Video](https://www.youtube.com/watch?v=OSGF4hL9kto)
 
 ## 📌 Project Overview
+
 **Scratchy Nib** is a comprehensive online platform dedicated to the timeless art of calligraphy. From traditional brush techniques to modern digital lettering, our website serves as both an educational resource and a vibrant community hub for calligraphy enthusiasts worldwide. Users can explore diverse calligraphic traditions, learn various writing styles, view stunning galleries of work from different cultures, and discover the tools and techniques that have shaped human communication for millennia.
 
 ## ✨ Main Features
 
 ### 🎨 Core Features
+
 - **Calligraphy Gallery** – Browse an extensive collection of calligraphic styles from around the world
 - **Style Filter System** – Filter by script type (Arabic, Chinese, Japanese, Greek, Latin, etc.)
 - **Interactive Learning** – Detailed information about each calligraphic tradition
@@ -33,12 +39,14 @@ Click below to explore the live version of our project:
 - **Typography Showcase** – Learn about different fonts and their calligraphic origins
 
 ### 📚 Educational Resources
+
 - **Historical Context** – Learn about the evolution of writing systems
 - **Cultural Significance** – Understand calligraphy's role in different cultures
 - **Technique Guides** – Step-by-step tutorials for various styles
 - **Tool Recommendations** – Find the right tools for your calligraphic journey
 
 ### 🔍 Advanced Features
+
 - **Search Functionality** – Find specific scripts, regions, or styles quickly
 - **Responsive Design** – Seamless experience across all devices
 - **Interactive Modals** – View detailed information about each script
@@ -49,27 +57,31 @@ Click below to explore the live version of our project:
 ## 🛠️ Technologies Used
 
 ### Frontend
+
 - **React.js** – Component-based UI architecture
 - **Vite** – Next-generation frontend build tool
 - **JavaScript ES6+** – Modern JavaScript features
 
 ### Styling & Animation
+
 - **CSS3** – Custom styling with modern CSS features
 - **Framer Motion** – Smooth animations and transitions
 - **React Icons** – Comprehensive icon library
 - **Google Fonts** – Beautiful typography
 
 ### Data Management
+
 - **JSON Data Files** – Organized data structure
 - **Dynamic Imports** – Efficient data loading
 
 ### Deployment
+
 - **GitHub Pages** – Static site hosting
-- **GitHub Actions** – Automated deployment
 
 ## 🚀 Getting Started (For Developers)
 
 ### Prerequisites
+
 - Node.js (v14+)
 - npm or yarn
 - Git
@@ -78,10 +90,10 @@ Click below to explore the live version of our project:
 
 ```bash
 # Clone the repository
-git clone https://github.com/quocti2003/MasterReactJS.git
+git clone https://github.com/quocti2003/scratchy-nib.git
 
 # Navigate into the project folder
-cd MasterReactJS
+cd scratchy-nib
 
 # Install dependencies
 npm install
@@ -154,20 +166,6 @@ scratchy-nib/
 - **Hebrew Scripts**: Square, Cursive, Rashi, Ashkenazi
 - **And many more...**
 
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - FPT Academy for project guidance
@@ -178,9 +176,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 For any inquiries about the project:
-- **GitHub**: [https://github.com/quocti2003/MasterReactJS](https://github.com/quocti2003/MasterReactJS)
-- **Live Site**: [https://quocti2003.github.io/MasterReactJS/](https://quocti2003.github.io/MasterReactJS/)
+
+- **GitHub**: [https://github.com/quocti2003/scratchy-nib.git](https://github.com/quocti2003/scratchy-nib.git)
+- **Live Site**: [https://scratchy-nib-one.vercel.app/](https://scratchy-nib-one.vercel.app/)
 
 ---
 
-*Made with ❤️ by Group 4 - ACE-HCMC-2-FPT*
+_Made with ❤️ by Group 4 - ACE-HCMC-2-FPT_

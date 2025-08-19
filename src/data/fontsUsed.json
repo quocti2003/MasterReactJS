@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Playfair Display",
+    "category": "Calligraphic Headers",
+    "description": "An elegant serif typeface with high contrast and distinctive details, perfect for calligraphic titles and headers. Features transitional letterforms with dramatic stroke contrast.",
+    "sample": "Beautiful Calligraphy",
+    "usage": "Main titles and section headers",
+    "className": "font-playfair",
+    "characteristics": ["High contrast strokes", "Elegant serifs", "Display proportions", "Transitional style"],
+    "letterforms": "Based on 18th-century transitional designs with modern refinements"
+  },
+  {
+    "name": "Dancing Script",
+    "category": "Script Font",
+    "description": "A lively casual script where the letters bounce and change size slightly. Reminds of hands-on calligraphy with natural pen movements.",
+    "sample": "Handwritten Style",
+    "usage": "Accent text and decorative elements",
+    "className": "font-dancing",
+    "characteristics": ["Bouncing baseline", "Connected letters", "Casual script", "Variable letter sizes"],
+    "letterforms": "Mimics natural handwriting with connecting strokes and flowing movements"
+  },
+  {
+    "name": "Poppins",
+    "category": "Modern Sans-Serif",
+    "description": "A clean, geometric sans-serif with excellent readability, providing modern contrast to traditional calligraphy. Features rounded letterforms.",
+    "sample": "Clean & Modern Text",
+    "usage": "Body text, navigation, and UI elements",
+    "className": "font-poppins",
+    "characteristics": ["Geometric construction", "Rounded forms", "Open apertures", "International support"],
+    "letterforms": "Based on geometric principles with humanistic touches for readability"
+  },
+  {
+    "name": "Crimson Text",
+    "category": "Classical Serif",
+    "description": "Inspired by old-style serif fonts, designed for reading comfort with traditional calligraphic influences. Perfect for long-form text.",
+    "sample": "Traditional Reading",
+    "usage": "Long-form content and descriptions",
+    "className": "font-crimson",
+    "characteristics": ["Old-style numerals", "Moderate contrast", "Classical proportions", "Excellent readability"],
+    "letterforms": "Based on Renaissance typefaces with calligraphic heritage and modern optimization"
+  },
+  {
+    "name": "Great Vibes",
+    "category": "Formal Script",
+    "description": "An elegant connecting script inspired by classical calligraphy, perfect for formal calligraphic demonstrations. Features sophisticated letterform connections.",
+    "sample": "Elegant Calligraphy",
+    "usage": "Special headings and artistic elements",
+    "className": "font-great-vibes",
+    "characteristics": ["Connecting script", "Formal elegance", "Classical inspiration", "Decorative capitals"],
+    "letterforms": "Inspired by 18th and 19th-century formal penmanship with refined connecting strokes"
+  },
+  {
+    "name": "Brush Script MT",
+    "category": "Brush Lettering",
+    "description": "A bold brush script that captures the essence of brush lettering and modern calligraphy. Perfect for contemporary calligraphic styles.",
+    "sample": "Brush Lettering",
+    "usage": "Bold headings and modern calligraphy examples",
+    "className": "font-brush-script",
+    "characteristics": ["Brush stroke texture", "Bold weight", "Casual elegance", "Modern appeal"],
+    "letterforms": "Simulates brush pen strokes with varying line weights and natural connections"
+  }
+]

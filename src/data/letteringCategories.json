@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Serif Styles",
+    "examples": ["Roman", "Transitional", "Modern", "Slab Serif"],
+    "color": "#667eea"
+  },
+  {
+    "name": "Sans Serif",
+    "examples": ["Geometric", "Humanist", "Neo-grotesque", "Casual"],
+    "color": "#764ba2"
+  },
+  {
+    "name": "Script Styles",
+    "examples": ["Formal", "Casual", "Brush", "Calligraphic"],
+    "color": "#9b59b6"
+  },
+  {
+    "name": "Decorative",
+    "examples": ["Vintage", "Graffiti", "Blackletter", "Art Nouveau"],
+    "color": "#3498db"
+  },
+  {
+    "name": "Chalk Lettering",
+    "examples": ["Bistro Style", "Vintage Boards", "Modern Chalk", "Artistic Blend"],
+    "color": "#e74c3c"
+  },
+  {
+    "name": "3D Lettering",
+    "examples": ["Shadow Effects", "Isometric", "Dimensional", "Perspective"],
+    "color": "#f39c12"
+  }
+]

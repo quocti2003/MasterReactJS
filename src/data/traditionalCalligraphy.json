@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Brush Calligraphy",
+    "description": "The art of writing with brush and ink, emphasizing fluid strokes and expressive character forms.",
+    "icon": "FaScroll",
+    "characteristics": ["Brush technique", "Ink flow", "Character expression"],
+    "image": "/public/brush-lettering.jpg"
+  },
+  {
+    "name": "Pen Calligraphy",
+    "description": "Elegant writing using traditional pens, focusing on consistent letterforms and classical beauty.",
+    "icon": "FaFeatherAlt",
+    "characteristics": ["Pen control", "Letter spacing", "Classical forms"],
+    "image": "/public/pen-calligraphy.jpeg"
+  },
+  {
+    "name": "Script Traditions",
+    "description": "Time-honored writing systems that preserve cultural heritage through beautiful lettering.",
+    "icon": "FaBook",
+    "characteristics": ["Cultural heritage", "Traditional methods", "Historical scripts"],
+    "image": "/public/script-tradition.jpg"
+  }
+]

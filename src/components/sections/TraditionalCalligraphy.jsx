@@ -11,21 +11,21 @@ const TraditionalCalligraphy = () => {
       description: 'The art of writing with brush and ink, emphasizing fluid strokes and expressive character forms.', // Mô tả
       icon: <FaScroll />, // Icon đại diện (dùng thư viện react-icons)
       characteristics: ['Brush technique', 'Ink flow', 'Character expression'], // Các đặc điểm nổi bật
-      image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=250' // Ảnh minh họa
+      image: '/public/brush-lettering.jpg' // Ảnh minh họa
     },
     {
       name: 'Pen Calligraphy',
       description: 'Elegant writing using traditional pens, focusing on consistent letterforms and classical beauty.',
       icon: <FaFeatherAlt />,
       characteristics: ['Pen control', 'Letter spacing', 'Classical forms'],
-      image: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=250'
+      image: '/public/pen-calligraphy.jpeg'
     },
     {
       name: 'Script Traditions',
       description: 'Time-honored writing systems that preserve cultural heritage through beautiful lettering.',
       icon: <FaBook />,
       characteristics: ['Cultural heritage', 'Traditional methods', 'Historical scripts'],
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250'
+      image: '/public/script-tradition.jpg'
     }
   ]
 

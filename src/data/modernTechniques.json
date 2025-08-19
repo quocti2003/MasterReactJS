@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "FaPenFancy",
+    "title": "Pointed Pen",
+    "description": "Modern pointed pen calligraphy for elegant scripts"
+  },
+  {
+    "icon": "FaTabletAlt",
+    "title": "Digital Tools",
+    "description": "iPad Pro and stylus for digital lettering"
+  },
+  {
+    "icon": "FaPrint",
+    "title": "Print Design",
+    "description": "Typography for modern branding and design"
+  },
+  {
+    "icon": "FaLaptop",
+    "title": "Web Typography",
+    "description": "Custom fonts and web-based calligraphy"
+  },
+  {
+    "icon": "FaBrush",
+    "title": "Brush Lettering",
+    "description": "Modern brush pens and markers for expressive, fluid letterforms"
+  },
+  {
+    "icon": "FaSprayCan",
+    "title": "Graffiti Calligraphy",
+    "description": "Urban street art meets traditional lettering in contemporary expression"
+  }
+]

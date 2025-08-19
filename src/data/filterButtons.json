@@ -1,0 +1,13 @@
+[
+  { "id": "all", "label": "All Scripts", "icon": "🌍" },
+  { "id": "Arabic Script", "label": "Arabic", "icon": "🕌" },
+  { "id": "Indic Script", "label": "Indic", "icon": "🕉️" },
+  { "id": "Greek Script", "label": "Greek", "icon": "🏛️" },
+  { "id": "Chinese Script", "label": "Chinese", "icon": "🏮" },
+  { "id": "Japanese Script", "label": "Japanese", "icon": "🎌" },
+  { "id": "Korean Script", "label": "Korean", "icon": "🇰🇷" },
+  { "id": "Hebrew Script", "label": "Hebrew", "icon": "✡️" },
+  { "id": "Cyrillic Script", "label": "Cyrillic", "icon": "🪆" },
+  { "id": "Thai Script", "label": "Thai", "icon": "🛕" },
+  { "id": "Tibetan Script", "label": "Tibetan", "icon": "🏔️" }
+]

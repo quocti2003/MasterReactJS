@@ -12,7 +12,7 @@
 ## 📄 Documentation
 
 You can view the complete project report here:  
-[eProject Report – Scratchy Nib](UPDATE LATER)
+[eProject Report – Scratchy Nib](https://docs.google.com/document/d/1gkSXphtwf-9JAUtirwm3PaMzcwqFXu93I-oYABEzwjc/edit?usp=sharing)
 
 ## 🌐 Live Website
 
